@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Free Samples - XINFENG XIN'AN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --green: #00A651; --green-dark: #008C44; --green-light: #E6F7EF;
+            --dark: #2D3748; --gray: #4A5568; --light: #F7FAFC;
+            --border: #E2E8F0; --bg: #F1F5F9; --white: #FFFFFF;
+            --shadow: 0 4px 16px rgba(0,0,0,0.08);
+            --radius: 10px; --transition: 0.3s ease;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'DM Sans', -apple-system, sans-serif;
+            color: var(--dark); line-height: 1.6;
+            background: var(--white); -webkit-font-smoothing: antialiased;
+        }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        .header {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(255,255,255,0.95); backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+        .header-inner {
+            display: flex; align-items: center; justify-content: space-between;
+            height: 72px; padding: 0 48px; max-width: 1440px; margin: 0 auto;
+        }
+        .logo {
+            display: flex; align-items: center; gap: 10px;
+            font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+            font-size: 17px; color: var(--dark);
+        }
+        .logo-icon {
+            width: 36px; height: 36px; background: var(--green);
+            border-radius: 6px; display: flex; align-items: center;
+            justify-content: center; color: white; font-weight: 800;
+            font-size: 16px;
+        }
+        .nav { display: flex; align-items: center; gap: 28px; }
+        .nav a {
+            font-size: 14px; font-weight: 500; color: var(--gray);
+            transition: var(--transition);
+        }
+        .nav a:hover { color: var(--green); }
+
+        .page-hero {
+            padding-top: 120px; padding-bottom: 48px;
+            background: linear-gradient(135deg, var(--green-light) 0%, var(--white) 100%);
+            text-align: center;
+        }
+        .page-hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 36px; font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .page-hero p {
+            font-size: 16px; color: var(--gray);
+            max-width: 600px; margin: 0 auto;
+        }
+        .steps {
+            display: flex; justify-content: center; gap: 0;
+            margin: 32px auto 0; max-width: 700px;
+            background: var(--white); border-radius: var(--radius);
+            box-shadow: var(--shadow); overflow: hidden;
+        }
+        .step {
+            flex: 1; padding: 16px 20px; text-align: center;
+            border-right: 1px solid var(--border);
+            font-size: 13px; color: var(--gray);
+        }
+        .step:last-child { border-right: none; }
+        .step .num {
+            display: inline-block; width: 28px; height: 28px;
+            line-height: 28px; border-radius: 50%;
+            background: var(--green-light); color: var(--green);
+            font-weight: 700; font-size: 14px; margin-bottom: 6px;
+        }
+        .step.active .num { background: var(--green); color: white; }
+        .step.active { color: var(--dark); font-weight: 600; }
+
+        .main-section { padding: 48px 0 80px; }
+        .sample-layout {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+        }
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 20px; font-weight: 700; margin-bottom: 20px;
+        }
+
+        .product-select { }
+        .product-grid-sm {
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+            max-height: 500px; overflow-y: auto;
+            padding-right: 8px;
+        }
+        .product-option {
+            display: flex; align-items: center; gap: 12px;
+            padding: 12px; border: 1px solid var(--border);
+            border-radius: 8px; cursor: pointer;
+            transition: var(--transition);
+        }
+        .product-option:hover { border-color: var(--green); }
+        .product-option.selected { border-color: var(--green); background: var(--green-light); }
+        .product-option input { display: none; }
+        .product-option img {
+            width: 50px; height: 50px; object-fit: cover;
+            border-radius: 4px;
+        }
+        .product-option .info { flex: 1; }
+        .product-option .name { font-size: 13px; font-weight: 600; }
+        .product-option .series { font-size: 11px; color: var(--gray); }
+
+        .form-section { }
+        .form-group { margin-bottom: 20px; }
+        .form-group label {
+            display: block; font-size: 13px; font-weight: 600;
+            margin-bottom: 6px; color: var(--dark);
+        }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%; padding: 12px 16px;
+            border: 1px solid var(--border); border-radius: 6px;
+            font-size: 14px; font-family: 'DM Sans', sans-serif;
+            transition: var(--transition); background: var(--white);
+        }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            outline: none; border-color: var(--green);
+            box-shadow: 0 0 0 3px rgba(0,166,81,0.1);
+        }
+        .form-group textarea { height: 100px; resize: vertical; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+        .btn-primary {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 14px 32px; background: var(--green); color: white;
+            border: none; border-radius: 6px; font-size: 15px;
+            font-weight: 600; cursor: pointer; transition: var(--transition);
+            font-family: 'DM Sans', sans-serif;
+        }
+        .btn-primary:hover { background: var(--green-dark); }
+        .btn-primary:disabled { opacity: 0.5; cursor: default; }
+
+        .success-message {
+            display: none; text-align: center; padding: 48px;
+        }
+        .success-message .icon {
+            width: 64px; height: 64px; background: var(--green-light);
+            border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; margin: 0 auto 16px;
+        }
+        .success-message .icon svg { width: 28px; height: 28px; color: var(--green); }
+        .success-message h2 { font-size: 24px; margin-bottom: 8px; }
+        .success-message p { color: var(--gray); }
+
+        .footer-bar {
+            padding: 24px 0; text-align: center;
+            border-top: 1px solid var(--border);
+            font-size: 13px; color: var(--gray);
+        }
+
+        @media (max-width: 768px) {
+            .header-inner { padding: 0 20px; height: 64px; }
+            .nav { display: none; }
+            .sample-layout { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .page-hero h1 { font-size: 28px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">X</div>
+                <span>XINFENG XIN'AN</span>
+            </a>
+            <nav class="nav">
+                <a href="index.html" data-i18n="nav.home">Home</a>
+                <a href="products.html" data-i18n="nav.products">Outdoor Tiles</a>
+                <a href="contact.html" data-i18n="nav.contact">Contact</a>
+            </nav>
+            <div style="display:flex;align-items:center;gap:8px;position:relative">
+                <button onclick="I18N.toggleDropdown()" style="display:flex;align-items:center;gap:4px;padding:6px 12px;border:1px solid var(--border);border-radius:6px;font-size:12px;font-weight:500;color:var(--gray);cursor:pointer;background:transparent;font-family:'DM Sans',sans-serif">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span id="langLabel">EN</span>
+                </button>
+                <div id="langDropdown" style="display:none;position:absolute;top:100%;right:0;margin-top:4px;background:white;border-radius:6px;box-shadow:0 4px 16px rgba(0,0,0,0.12);border:1px solid var(--border);overflow:hidden;z-index:10;min-width:120px">
+                    <div onclick="I18N.switchLang('en')" style="padding:8px 14px;font-size:13px;cursor:pointer;transition:0.2s" onmouseover="this.style.background='var(--green-light)'" onmouseout="this.style.background=''">EN - English</div>
+                    <div onclick="I18N.switchLang('zh')" style="padding:8px 14px;font-size:13px;cursor:pointer;transition:0.2s" onmouseover="this.style.background='var(--green-light)'" onmouseout="this.style.background=''">中文</div>
+                    <div onclick="I18N.switchLang('ru')" style="padding:8px 14px;font-size:13px;cursor:pointer;transition:0.2s" onmouseover="this.style.background='var(--green-light)'" onmouseout="this.style.background=''">Русский</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-hero">
+        <div class="container">
+            <h1 data-i18n="hero.title">Request Free Samples</h1>
+            <p data-i18n="hero.sub">Select up to 4 products and we'll send free samples to your address. Experience the quality firsthand.</p>
+            <div class="steps">
+                <div class="step active" id="step1">
+                    <div class="num">1</div>
+                    <span data-i18n="step1">Select Products</span>
+                </div>
+                <div class="step" id="step2">
+                    <div class="num">2</div>
+                    <span data-i18n="step2">Shipping Address</span>
+                </div>
+                <div class="step" id="step3">
+                    <div class="num">3</div>
+                    <span data-i18n="step3">Confirm &amp; Submit</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-section">
+        <div class="container" id="sampleForm">
+            <div class="sample-layout">
+                <div class="product-select">
+                    <h2 class="section-title" data-i18n="select.title">Choose Products <span style="font-size:13px;font-weight:400;color:var(--gray)" data-i18n="select.max">(max 4)</span></h2>
+                    <p style="font-size:13px;color:var(--gray);margin-bottom:16px" data-i18n="select.desc">Select the products you'd like to receive samples of:</p>
+                    <div class="product-grid-sm" id="productGrid">
+                        <!-- Products rendered by JS -->
+                    </div>
+                </div>
+                <div class="form-section">
+                    <h2 class="section-title" data-i18n="form.title">Shipping Information</h2>
+                    <form id="sampleFormSubmit" onsubmit="submitSample(event)">
+                        <div class="form-group">
+                            <label data-i18n="form.name">Full Name *</label>
+                            <input type="text" id="fullName" placeholder="John Smith" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label data-i18n="form.company">Company</label>
+                                <input type="text" id="company" placeholder="Company Name">
+                            </div>
+                            <div class="form-group">
+                                <label data-i18n="form.email">Email *</label>
+                                <input type="email" id="email" placeholder="john@company.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="form.phone">Phone / WhatsApp *</label>
+                            <input type="tel" id="phone" placeholder="+86 123 4567 8900" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="form.country">Country *</label>
+                            <select id="country" required>
+                                <option value="" data-i18n="country.select">Select country...</option>
+                                <option value="RU" data-i18n="country.ru">Russia</option>
+                                <option value="KZ" data-i18n="country.kz">Kazakhstan</option>
+                                <option value="UZ" data-i18n="country.uz">Uzbekistan</option>
+                                <option value="AE" data-i18n="country.ae">UAE</option>
+                                <option value="SA" data-i18n="country.sa">Saudi Arabia</option>
+                                <option value="MY" data-i18n="country.my">Malaysia</option>
+                                <option value="SG" data-i18n="country.sg">Singapore</option>
+                                <option value="CN" data-i18n="country.cn">China</option>
+                                <option value="Other" data-i18n="country.other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label data-i18n="form.city">City *</label>
+                                <input type="text" id="city" placeholder="City" required>
+                            </div>
+                            <div class="form-group">
+                                <label data-i18n="form.zip">Postal Code</label>
+                                <input type="text" id="zip" placeholder="Postal code">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="form.address">Street Address *</label>
+                            <textarea id="address" placeholder="Street address, building, apartment" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="form.notes">Notes (optional)</label>
+                            <textarea id="notes" placeholder="Any specific requirements or preferences..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" id="submitBtn" data-i18n="form.submit">
+                            Submit Sample Request
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="success-message" id="successMessage">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <h2 data-i18n="success.title">Request Submitted!</h2>
+                <p data-i18n="success.desc">Thank you! Our team will review your sample request and contact you within 24 hours to confirm shipping details.</p>
+                <p style="margin-top:8px;font-size:14px;color:var(--gray)" data-i18n="success.track">You'll receive a confirmation email with your tracking number once shipped.</p>
+                <a href="products.html" class="btn-primary" style="margin-top:24px;text-decoration:none" data-i18n="success.cta">Browse More Products</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bar">
+        <div class="container">
+            &copy; 2026 Xinfeng Xinan. All rights reserved.
+        </div>
+    </div>
+
+    <script src="js/products-data.js"></script>
+    <script>
+    var selectedProducts = [];
+
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof PRODUCTS_DATA === 'undefined') return;
+        
+        var grid = document.getElementById('productGrid');
+        var html = '';
+        var count = 0;
+        
+        for (var sid in PRODUCTS_DATA) {
+            var s = PRODUCTS_DATA[sid];
+            if (sid === 'eco-brick') continue; // Too many eco-brick variants
+            s.variants.forEach(function(v) {
+                if (count >= 24) return;
+                html += '<div class="product-option" data-series="' + sid + '" data-name="' + v.name.replace(/"/g, '&quot;') + '" onclick="toggleProduct(this)">';
+                html += '  <img src="' + v.primary + '" alt="' + v.name + '" loading="lazy">';
+                html += '  <div class="info">';
+                html += '    <div class="name">' + v.name + '</div>';
+                html += '    <div class="series">' + (v.specs.size || '') + ' · ' + (v.specs.finish || '') + '</div>';
+                html += '  </div>';
+                html += '</div>';
+                count++;
+            });
+        }
+        // Add eco brick products (limit to first 8)
+        var eco = PRODUCTS_DATA['eco-brick'];
+        if (eco) {
+            eco.variants.slice(0, 8).forEach(function(v) {
+                html += '<div class="product-option" data-series="eco-brick" data-name="' + v.name.replace(/"/g, '&quot;') + '" onclick="toggleProduct(this)">';
+                html += '  <img src="' + v.primary + '" alt="' + v.name + '" loading="lazy">';
+                html += '  <div class="info">';
+                html += '    <div class="name">' + v.name + '</div>';
+                html += '    <div class="series">Eco Brick · ' + (v.category || '') + '</div>';
+                html += '  </div>';
+                html += '</div>';
+            });
+        }
+        grid.innerHTML = html;
+    });
+
+    function toggleProduct(el) {
+        var name = el.dataset.name;
+        var idx = selectedProducts.indexOf(name);
+        if (idx > -1) {
+            selectedProducts.splice(idx, 1);
+            el.classList.remove('selected');
+        } else if (selectedProducts.length < 4) {
+            selectedProducts.push(name);
+            el.classList.add('selected');
+        } else {
+            alert('You can select up to 4 products.');
+        }
+    }
+
+    function submitSample(e) {
+        e.preventDefault();
+        if (selectedProducts.length === 0) {
+            alert('Please select at least 1 product.');
+            return;
+        }
+        document.getElementById('sampleForm').style.display = 'none';
+        document.getElementById('successMessage').style.display = 'block';
+        // In production, this would send data to a server
+        console.log('Sample request:', {
+            products: selectedProducts,
+            name: document.getElementById('fullName').value,
+            company: document.getElementById('company').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            country: document.getElementById('country').value,
+            city: document.getElementById('city').value,
+            address: document.getElementById('address').value
+        });
+    }
+    </script>
+    <script src="js/i18n.js"></script>
+    <script>
+    var pageTranslations = {
+        en: {
+            'nav.home': 'Home', 'nav.products': 'Outdoor Tiles', 'nav.contact': 'Contact',
+            'hero.title': 'Request Free Samples',
+            'hero.sub': 'Select up to 4 products and we\'ll send free samples to your address. Experience the quality firsthand.',
+            'step1': 'Select Products', 'step2': 'Shipping Address', 'step3': 'Confirm & Submit',
+            'select.title': 'Choose Products', 'select.max': '(max 4)', 'select.desc': 'Select the products you\'d like to receive samples of:',
+            'form.title': 'Shipping Information', 'form.name': 'Full Name *', 'form.company': 'Company',
+            'form.email': 'Email *', 'form.phone': 'Phone / WhatsApp *', 'form.country': 'Country *',
+            'form.city': 'City *', 'form.zip': 'Postal Code', 'form.address': 'Street Address *',
+            'form.notes': 'Notes (optional)', 'form.submit': 'Submit Sample Request',
+            'country.select': 'Select country...', 'country.ru': 'Russia', 'country.kz': 'Kazakhstan',
+            'country.uz': 'Uzbekistan', 'country.ae': 'UAE', 'country.sa': 'Saudi Arabia',
+            'country.my': 'Malaysia', 'country.sg': 'Singapore', 'country.cn': 'China', 'country.other': 'Other',
+            'success.title': 'Request Submitted!',
+            'success.desc': 'Thank you! Our team will review your sample request and contact you within 24 hours to confirm shipping details.',
+            'success.track': 'You\'ll receive a confirmation email with your tracking number once shipped.',
+            'success.cta': 'Browse More Products',
+            'footer.text': '\u00a9 2026 Xinfeng Xinan. All rights reserved.'
+        },
+        zh: {
+            'nav.home': '\u9996\u9875', 'nav.products': '\u6237\u5916\u7816', 'nav.contact': '\u8054\u7CFB\u6211\u4EEC',
+            'hero.title': '\u7533\u8BF7\u514D\u8D39\u6837\u54C1',
+            'hero.sub': '\u9009\u62E9\u6700\u591A4\u6B3E\u4EA7\u54C1\uFF0C\u6211\u4EEC\u5C06\u514D\u8D39\u5BC4\u9001\u6837\u54C1\u5230\u60A8\u7684\u5730\u5740\u3002\u4EB2\u8EAB\u4F53\u9A8C\u4EA7\u54C1\u54C1\u8D28\u3002',
+            'step1': '\u9009\u62E9\u4EA7\u54C1', 'step2': '\u7F16\u5199\u5730\u5740', 'step3': '\u786E\u8BA4\u63D0\u4EA4',
+            'select.title': '\u9009\u62E9\u4EA7\u54C1', 'select.max': '\uFF08\u6700\u591A4\u6B3E\uFF09', 'select.desc': '\u8BF7\u9009\u62E9\u60A8\u60F3\u8981\u7533\u8BF7\u6837\u54C1\u7684\u4EA7\u54C1\uFF1A',
+            'form.title': '\u6536\u8D27\u4FE1\u606F', 'form.name': '\u59D3\u540D *', 'form.company': '\u516C\u53F8',
+            'form.email': '\u90AE\u7BB1 *', 'form.phone': '\u7535\u8BDD / WhatsApp *', 'form.country': '\u56FD\u5BB6 *',
+            'form.city': '\u57CE\u5E02 *', 'form.zip': '\u90AE\u653F\u7F16\u7801', 'form.address': '\u8857\u9053\u5730\u5740 *',
+            'form.notes': '\u5907\u6CE8\uFF08\u9009\u586B\uFF09', 'form.submit': '\u63D0\u4EA4\u6837\u54C1\u7533\u8BF7',
+            'country.select': '\u9009\u62E9\u56FD\u5BB6...', 'country.ru': '\u4FC4\u7F57\u65AF', 'country.kz': '\u54C8\u8428\u514B\u65AF\u5766',
+            'country.uz': '\u4E4C\u5179\u522B\u514B\u65AF\u5766', 'country.ae': '\u963F\u8054\u914B', 'country.sa': '\u6C99\u7279\u963F\u62C9\u4F2F',
+            'country.my': '\u9A6C\u6765\u897F\u4E9A', 'country.sg': '\u65B0\u52A0\u5761', 'country.cn': '\u4E2D\u56FD', 'country.other': '\u5176\u4ED6',
+            'success.title': '\u7533\u8BF7\u5DF2\u63D0\u4EA4\uFF01',
+            'success.desc': '\u611F\u8C22\u60A8\uFF01\u6211\u4EEC\u7684\u56E2\u961F\u5C06\u572824\u5C0F\u65F6\u5185\u5BA1\u6838\u60A8\u7684\u6837\u54C1\u7533\u8BF7\u5E76\u4E0E\u60A8\u8054\u7CFB\u786E\u8BA4\u8FD0\u8D39\u8BE6\u60C5\u3002',
+            'success.track': '\u4E00\u65E6\u5BC4\u51FA\uFF0C\u60A8\u5C06\u6536\u5230\u542B\u6709\u8DDF\u8E2A\u53F7\u7684\u786E\u8BA4\u90AE\u4EF6\u3002',
+            'success.cta': '\u6D4F\u89C8\u66F4\u591A\u4EA7\u54C1',
+            'footer.text': '\u00a9 2026 \u65B0\u5CF0\u65B0\u5B89\u3002\u4FDD\u7559\u6240\u6709\u6743\u5229\u3002'
+        },
+        ru: {
+            'nav.home': '\u0413\u043B\u0430\u0432\u043D\u0430\u044F', 'nav.products': '\u0423\u043B\u0438\u0447\u043D\u0430\u044F \u043F\u043B\u0438\u0442\u043A\u0430', 'nav.contact': '\u041A\u043E\u043D\u0442\u0430\u043A\u0442\u044B',
+            'hero.title': '\u0417\u0430\u043F\u0440\u043E\u0441\u0438\u0442\u044C \u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u044B\u0435 \u043E\u0431\u0440\u0430\u0437\u0446\u044B',
+            'hero.sub': '\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u0434\u043E 4 \u043F\u0440\u043E\u0434\u0443\u043A\u0442\u043E\u0432, \u0438 \u043C\u044B \u0431\u0435\u0441\u043F\u043B\u0430\u0442\u043D\u043E \u043F\u0440\u0438\u0448\u043B\u0435\u043C \u043E\u0431\u0440\u0430\u0437\u0446\u044B \u043D\u0430 \u0432\u0430\u0448 \u0430\u0434\u0440\u0435\u0441.',
+            'step1': '\u0412\u044B\u0431\u043E\u0440 \u043F\u0440\u043E\u0434\u0443\u043A\u0442\u043E\u0432', 'step2': '\u0410\u0434\u0440\u0435\u0441 \u0434\u043E\u0441\u0442\u0430\u0432\u043A\u0438', 'step3': '\u041F\u043E\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0435\u043D\u0438\u0435',
+            'select.title': '\u0412\u044B\u0431\u043E\u0440 \u043F\u0440\u043E\u0434\u0443\u043A\u0442\u043E\u0432', 'select.max': '(\u043C\u0430\u043A\u0441. 4)', 'select.desc': '\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u043F\u0440\u043E\u0434\u0443\u043A\u0442\u044B \u0434\u043B\u044F \u043E\u0431\u0440\u0430\u0437\u0446\u043E\u0432:',
+            'form.title': '\u0418\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F \u043E \u0434\u043E\u0441\u0442\u0430\u0432\u043A\u0435', 'form.name': '\u0424\u0418\u041E *', 'form.company': '\u041A\u043E\u043C\u043F\u0430\u043D\u0438\u044F',
+            'form.email': 'Email *', 'form.phone': '\u0422\u0435\u043B\u0435\u0444\u043E\u043D / WhatsApp *', 'form.country': '\u0421\u0442\u0440\u0430\u043D\u0430 *',
+            'form.city': '\u0413\u043E\u0440\u043E\u0434 *', 'form.zip': '\u041F\u043E\u0447\u0442\u043E\u0432\u044B\u0439 \u0438\u043D\u0434\u0435\u043A\u0441', 'form.address': '\u0410\u0434\u0440\u0435\u0441 *',
+            'form.notes': '\u041F\u0440\u0438\u043C\u0435\u0447\u0430\u043D\u0438\u044F (\u043D\u0435\u043E\u0431\u044F\u0437.)', 'form.submit': '\u041E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C \u0437\u0430\u043F\u0440\u043E\u0441',
+            'country.select': '\u0412\u044B\u0431\u0435\u0440\u0438\u0442\u0435 \u0441\u0442\u0440\u0430\u043D\u0443...', 'country.ru': '\u0420\u043E\u0441\u0441\u0438\u044F', 'country.kz': '\u041A\u0430\u0437\u0430\u0445\u0441\u0442\u0430\u043D',
+            'country.uz': '\u0423\u0437\u0431\u0435\u043A\u0438\u0441\u0442\u0430\u043D', 'country.ae': '\u041E\u0410\u042D', 'country.sa': '\u0421\u0430\u0443\u0434\u043E\u0432\u0441\u043A\u0430\u044F \u0410\u0440\u0430\u0432\u0438\u044F',
+            'country.my': '\u041C\u0430\u043B\u0430\u0439\u0437\u0438\u044F', 'country.sg': '\u0421\u0438\u043D\u0433\u0430\u043F\u0443\u0440', 'country.cn': '\u041A\u0438\u0442\u0430\u0439', 'country.other': '\u0414\u0440\u0443\u0433\u043E\u0435',
+            'success.title': '\u0417\u0430\u043F\u0440\u043E\u0441 \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u0435\u043D!',
+            'success.desc': '\u0421\u043F\u0430\u0441\u0438\u0431\u043E! \u041D\u0430\u0448\u0430 \u043A\u043E\u043C\u0430\u043D\u0434\u0430 \u0440\u0430\u0441\u0441\u043C\u043E\u0442\u0440\u0438\u0442 \u0437\u0430\u043F\u0440\u043E\u0441 \u0438 \u0441\u0432\u044F\u0436\u0435\u0442\u0441\u044F \u0441 \u0432\u0430\u043C\u0438 \u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0435 24 \u0447\u0430\u0441\u043E\u0432.',
+            'success.track': '\u0412\u044B \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u0435 \u043F\u0438\u0441\u044C\u043C\u043E \u0441 \u043D\u043E\u043C\u0435\u0440\u043E\u043C \u043E\u0442\u0441\u043B\u0435\u0436\u0438\u0432\u0430\u043D\u0438\u044F \u043F\u043E\u0441\u043B\u0435 \u043E\u0442\u043F\u0440\u0430\u0432\u043A\u0438.',
+            'success.cta': '\u041F\u0440\u043E\u0441\u043C\u043E\u0442\u0440\u0435\u0442\u044C \u0431\u043E\u043B\u044C\u0448\u0435 \u043F\u0440\u043E\u0434\u0443\u043A\u0442\u043E\u0432',
+            'footer.text': '\u00a9 2026 Xinfeng Xinan. \u0412\u0441\u0435 \u043F\u0440\u0430\u0432\u0430 \u0437\u0430\u0449\u0438\u0449\u0435\u043D\u044B.'
+        }
+    };
+    
+    // Auto-init
+    I18N.init(pageTranslations);
+    </script>
+</body>
+</html>
