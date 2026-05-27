@@ -1,0 +1,1890 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XINFENG XIN'AN - Premium Eco Porcelain Pavers</title>
+    <meta name="description" content="Leading manufacturer of eco porcelain pavers. Suspension calcination technology, dry process, waste recycling. 1500-acre factory, 40 production lines.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* ========== RESET & BASE ========== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --brand-green: #00A651;
+            --brand-green-dark: #008C44;
+            --brand-green-light: #E6F7EF;
+            --dark-gray: #2D3748;
+            --medium-gray: #4A5568;
+            --light-gray: #F7FAFC;
+            --border-gray: #E2E8F0;
+            --bg-gray: #F1F5F9;
+            --white: #FFFFFF;
+            --accent-orange: #F97316;
+            --accent-blue: #3182CE;
+            --success: #10B981;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.1);
+            --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
+            --shadow-xl: 0 20px 60px rgba(0,0,0,0.15);
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --container: 1280px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: 'DM Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--dark-gray);
+            line-height: 1.6;
+            background: var(--white);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        img { max-width: 100%; display: block; }
+        .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+        /* ========== HEADER / NAVIGATION ========== */
+        .header {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid transparent;
+            transition: var(--transition);
+        }
+        .header.scrolled {
+            border-bottom-color: var(--border-gray);
+            box-shadow: var(--shadow-sm);
+        }
+        .header-inner {
+            display: flex; align-items: center; justify-content: space-between;
+            height: 80px; padding: 0 48px; max-width: 1440px; margin: 0 auto;
+        }
+        .logo {
+            display: flex; align-items: center; gap: 12px;
+            font-family: 'Space Grotesk', 'DM Sans', sans-serif; font-weight: 700;
+            font-size: 18px; color: var(--dark-gray); letter-spacing: 0.5px;
+        }
+        .logo-icon {
+            width: 42px; height: 42px; background: var(--brand-green);
+            border-radius: 8px; display: flex; align-items: center;
+            justify-content: center; color: white; font-weight: 800;
+            font-size: 20px; font-family: 'Space Grotesk', sans-serif;
+        }
+        .logo-text span { color: var(--brand-green); }
+        .nav { display: flex; align-items: center; gap: 36px; }
+        .nav a {
+            font-size: 14px; font-weight: 500; color: var(--medium-gray);
+            letter-spacing: 0.3px; position: relative; padding: 4px 0;
+        }
+        .nav a::after {
+            content: ''; position: absolute; bottom: -2px; left: 0;
+            width: 0; height: 2px; background: var(--brand-green);
+            transition: var(--transition);
+        }
+        .nav a:hover, .nav a.active { color: var(--dark-gray); }
+        .nav a:hover::after, .nav a.active::after { width: 100%; }
+        .header-actions { display: flex; align-items: center; gap: 16px; position: relative; }
+        .lang-switch {
+            position: relative;
+            display: flex; align-items: center; gap: 6px;
+            padding: 8px 14px; border: 1px solid var(--border-gray);
+            border-radius: var(--radius-sm); font-size: 13px;
+            font-weight: 500; color: var(--medium-gray); cursor: pointer;
+            background: transparent; transition: var(--transition);
+        }
+        .lang-switch:hover { border-color: var(--brand-green); color: var(--brand-green); }
+        .lang-switch svg { width: 14px; height: 14px; }
+        .lang-dropdown {
+            display: none; position: absolute; top: 100%; right: 0; margin-top: 8px;
+            background: white; border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg); border: 1px solid var(--border-gray);
+            overflow: hidden; z-index: 100; min-width: 140px;
+        }
+        .lang-dropdown.show { display: block; }
+        .lang-option {
+            display: flex; align-items: center; gap: 8px;
+            padding: 10px 16px; font-size: 13px; color: var(--medium-gray);
+            cursor: pointer; transition: var(--transition);
+        }
+        .lang-option:hover { background: var(--brand-green-light); color: var(--brand-green); }
+        .lang-option.active { background: var(--brand-green); color: white; font-weight: 600; }
+        .btn-quote {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 10px 24px; background: var(--brand-green);
+            color: white; border: none; border-radius: var(--radius-sm);
+            font-size: 14px; font-weight: 600; cursor: pointer;
+            transition: var(--transition); letter-spacing: 0.3px;
+        }
+        .btn-quote:hover { background: var(--brand-green-dark); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+        .mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+        .mobile-toggle span {
+            display: block; width: 24px; height: 2px; background: var(--dark-gray);
+            margin: 5px 0; transition: var(--transition); border-radius: 2px;
+        }
+
+        /* ========== HERO SECTION ========== */
+        .hero {
+            position: relative; min-height: 100vh; display: flex;
+            align-items: center; overflow: hidden;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+        }
+        .hero-bg {
+            position: absolute; inset: 0; z-index: 1;
+            background:
+                url('images/scenes/19ce0e83fae8f.png') center/cover no-repeat;
+            opacity: 0.45; transform: scale(1.05);
+            animation: heroZoom 25s ease-in-out infinite alternate;
+            transition: background-image 1.5s ease;
+        }
+        .hero-bg-overlay {
+            position: absolute; inset: 0; z-index: 2;
+            background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.25) 40%, rgba(0,0,0,0.45) 100%);
+        }
+        @keyframes heroZoom {
+            0% { transform: scale(1.05); }
+            100% { transform: scale(1.15); }
+        }
+        .hero-overlay {
+            position: absolute; inset: 0; z-index: 2;
+            background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.5) 100%);
+        }
+        .hero-content {
+            position: relative; z-index: 3; max-width: var(--container);
+            margin: 0 auto; padding: 0 48px; padding-top: 80px;
+            width: 100%;
+        }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 8px 20px; background: rgba(0,166,81,0.15);
+            border: 1px solid rgba(0,166,81,0.3); border-radius: 50px;
+            font-size: 13px; font-weight: 500; color: #4ADE80;
+            margin-bottom: 32px; backdrop-filter: blur(10px);
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+        .hero-badge::before {
+            content: ''; width: 6px; height: 6px; background: var(--brand-green);
+            border-radius: 50%; animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+        .hero h1 {
+            font-family: 'Space Grotesk', 'DM Sans', sans-serif;
+            font-size: clamp(48px, 6.5vw, 88px); font-weight: 700;
+            color: white; line-height: 1.05; letter-spacing: -2px;
+            margin-bottom: 20px; max-width: 820px;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+            text-transform: uppercase;
+        }
+        .hero h1 .accent { 
+            color: var(--brand-green);
+            background: linear-gradient(135deg, #00A651, #00CC66);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero h1 .tagline { 
+            display: block;
+            font-size: clamp(14px, 1.2vw, 18px);
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.4);
+            -webkit-text-fill-color: rgba(255,255,255,0.4);
+            background: none;
+            margin-top: 8px;
+        }
+        .hero-sub {
+            font-size: clamp(16px, 1.5vw, 20px); color: rgba(255,255,255,0.75);
+            line-height: 1.7; max-width: 600px; margin-bottom: 20px;
+            font-weight: 300;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+        .hero-tags {
+            display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px;
+            animation: fadeInUp 0.8s ease-out 0.7s both;
+        }
+        .hero-tag {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 6px 16px; background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15); border-radius: 50px;
+            font-size: 13px; color: rgba(255,255,255,0.8);
+            backdrop-filter: blur(10px);
+        }
+        .hero-tag svg { width: 14px; height: 14px; color: var(--brand-green); }
+        .hero-buttons {
+            display: flex; gap: 16px; flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease-out 0.8s both;
+        }
+        .btn-primary {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 16px 36px; background: var(--brand-green); color: white;
+            border: none; border-radius: var(--radius-sm); font-size: 16px;
+            font-weight: 600; cursor: pointer; transition: var(--transition);
+            letter-spacing: 0.3px;
+        }
+        .btn-primary:hover { background: var(--brand-green-dark); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,166,81,0.35); }
+        .btn-primary svg { width: 18px; height: 18px; transition: transform 0.3s; }
+        .btn-primary:hover svg { transform: translateX(3px); }
+        .btn-outline {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 16px 36px; background: transparent; color: white;
+            border: 1.5px solid rgba(255,255,255,0.3); border-radius: var(--radius-sm);
+            font-size: 16px; font-weight: 500; cursor: pointer;
+            transition: var(--transition); letter-spacing: 0.3px;
+        }
+        .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.5); }
+        .hero-scroll {
+            position: absolute; bottom: 40px; left: 50%;
+            transform: translateX(-50%); z-index: 3;
+            display: flex; flex-direction: column; align-items: center; gap: 8px;
+            color: rgba(255,255,255,0.4); font-size: 12px;
+            letter-spacing: 2px; text-transform: uppercase;
+            animation: fadeInUp 0.8s ease-out 1.2s both;
+        }
+        .scroll-line {
+            width: 1px; height: 40px; background: rgba(255,255,255,0.2);
+            position: relative; overflow: hidden;
+        }
+        .scroll-line::after {
+            content: ''; position: absolute; top: -100%; left: 0;
+            width: 100%; height: 100%; background: rgba(255,255,255,0.6);
+            animation: scrollDown 2s ease-in-out infinite;
+        }
+        @keyframes scrollDown {
+            0% { top: -100%; }
+            100% { top: 100%; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ========== SECTION COMMON ========== */
+        .section { padding: 100px 0; }
+        .section-header { text-align: center; margin-bottom: 64px; }
+        .section-label {
+            display: inline-flex; align-items: center; gap: 8px;
+            font-size: 13px; font-weight: 600; color: var(--brand-green);
+            letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px;
+        }
+        .section-label::before, .section-label::after {
+            content: ''; width: 24px; height: 1px; background: var(--brand-green);
+            opacity: 0.4;
+        }
+        .section-title {
+            font-family: 'DM Sans', 'Space Grotesk', sans-serif;
+            font-size: clamp(28px, 3vw, 42px); font-weight: 700;
+            color: var(--dark-gray); letter-spacing: -0.5px; margin-bottom: 16px;
+        }
+        .section-desc {
+            font-size: 17px; color: var(--medium-gray); max-width: 600px;
+            margin: 0 auto; line-height: 1.7;
+        }
+
+        /* ========== USP / WHY CHOOSE ========== */
+        .usp { background: var(--white); }
+        .usp-grid {
+            display: grid; grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+        .usp-card {
+            text-align: center; padding: 40px 28px;
+            border-radius: var(--radius-lg); border: 1px solid var(--border-gray);
+            transition: var(--transition); position: relative; overflow: hidden;
+        }
+        .usp-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0;
+            height: 3px; background: var(--brand-green); transform: scaleX(0);
+            transition: var(--transition);
+        }
+        .usp-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: transparent; }
+        .usp-card:hover::before { transform: scaleX(1); }
+        .usp-icon {
+            width: 64px; height: 64px; margin: 0 auto 24px;
+            background: var(--brand-green-light); border-radius: var(--radius-md);
+            display: flex; align-items: center; justify-content: center;
+            transition: var(--transition);
+        }
+        .usp-card:hover .usp-icon { background: var(--brand-green); }
+        .usp-icon svg {
+            width: 28px; height: 28px; color: var(--brand-green);
+            transition: var(--transition);
+        }
+        .usp-card:hover .usp-icon svg { color: white; }
+        .usp-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 36px; font-weight: 800; color: var(--brand-green);
+            margin-bottom: 4px; line-height: 1;
+        }
+        .usp-number-unit {
+            font-size: 14px; color: var(--medium-gray); font-weight: 500;
+            margin-bottom: 12px;
+        }
+        .usp-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 16px; font-weight: 700; color: var(--dark-gray);
+            margin-bottom: 8px;
+        }
+        .usp-desc {
+            font-size: 14px; color: var(--medium-gray); line-height: 1.6;
+        }
+
+        /* ========== CATEGORY GRID ========== */
+        .categories { background: var(--bg-gray); }
+        .cat-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .cat-card {
+            position: relative; height: 320px; border-radius: var(--radius-lg);
+            overflow: hidden; cursor: pointer; group: true;
+        }
+        .cat-card img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .cat-card:hover img { transform: scale(1.08); }
+        .cat-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.1) 60%);
+            display: flex; flex-direction: column; justify-content: flex-end;
+            padding: 32px; transition: var(--transition);
+        }
+        .cat-card:hover .cat-overlay { background: linear-gradient(to top, rgba(0,166,81,0.85) 0%, rgba(0,0,0,0.1) 70%); }
+        .cat-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 22px; font-weight: 700; color: white; margin-bottom: 6px;
+            transition: var(--transition);
+        }
+        .cat-subtitle { font-size: 14px; color: rgba(255,255,255,0.7); transition: var(--transition); }
+        .cat-arrow {
+            position: absolute; top: 24px; right: 24px;
+            width: 44px; height: 44px; background: rgba(255,255,255,0.15);
+            border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; backdrop-filter: blur(10px);
+            opacity: 0; transform: translate(-10px, 10px);
+            transition: var(--transition);
+        }
+        .cat-card:hover .cat-arrow { opacity: 1; transform: translate(0, 0); }
+        .cat-arrow svg { width: 18px; height: 18px; color: white; }
+
+        /* ========== FEATURED PRODUCTS ========== */
+        .products { background: var(--white); }
+        .products-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+        }
+        .product-card {
+            border-radius: var(--radius-lg); overflow: hidden;
+            border: 1px solid var(--border-gray); transition: var(--transition);
+            background: white;
+        }
+        .product-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-xl); border-color: transparent; }
+        .product-img {
+            position: relative; height: 300px; overflow: hidden;
+            background: var(--bg-gray);
+        }
+        .product-img img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .product-card:hover .product-img img { transform: scale(1.06); }
+        .product-badge {
+            position: absolute; top: 16px; left: 16px;
+            padding: 6px 14px; background: var(--brand-green);
+            color: white; font-size: 11px; font-weight: 600;
+            border-radius: 50px; letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .product-wishlist {
+            position: absolute; top: 16px; right: 16px;
+            width: 40px; height: 40px; background: white;
+            border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; box-shadow: var(--shadow-sm);
+            cursor: pointer; transition: var(--transition);
+        }
+        .product-wishlist:hover { background: var(--brand-green); }
+        .product-wishlist svg { width: 16px; height: 16px; color: var(--medium-gray); }
+        .product-wishlist:hover svg { color: white; }
+        .product-info { padding: 24px; }
+        .product-series {
+            font-size: 12px; font-weight: 600; color: var(--brand-green);
+            letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px;
+        }
+        .product-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 18px; font-weight: 700; color: var(--dark-gray);
+            margin-bottom: 12px;
+        }
+        .product-specs {
+            display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;
+        }
+        .spec-tag {
+            padding: 4px 10px; background: var(--bg-gray);
+            font-size: 12px; color: var(--medium-gray);
+            border-radius: 4px; font-weight: 500;
+        }
+        .product-colors {
+            display: flex; gap: 6px; margin-bottom: 16px;
+        }
+        .color-dot {
+            width: 22px; height: 22px; border-radius: 50%;
+            border: 2px solid white; box-shadow: 0 0 0 1px var(--border-gray);
+            cursor: pointer; transition: var(--transition);
+        }
+        .color-dot:hover { box-shadow: 0 0 0 2px var(--brand-green); }
+        .product-bottom {
+            display: flex; align-items: center; justify-content: space-between;
+            padding-top: 16px; border-top: 1px solid var(--border-gray);
+        }
+        .product-sizes { font-size: 13px; color: var(--medium-gray); }
+        .product-link {
+            display: inline-flex; align-items: center; gap: 6px;
+            font-size: 14px; font-weight: 600; color: var(--brand-green);
+        }
+        .product-link svg { width: 14px; height: 14px; transition: transform 0.3s; }
+        .product-link:hover svg { transform: translateX(4px); }
+        .products-cta {
+            text-align: center; margin-top: 48px;
+        }
+        .btn-secondary {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 14px 36px; background: transparent; color: var(--brand-green);
+            border: 2px solid var(--brand-green); border-radius: var(--radius-sm);
+            font-size: 15px; font-weight: 600; cursor: pointer;
+            transition: var(--transition);
+        }
+        .btn-secondary:hover { background: var(--brand-green); color: white; }
+        .btn-secondary svg { width: 16px; height: 16px; }
+
+        .btn-secondary:hover { background: var(--brand-green); color: white; }
+        .btn-secondary svg { width: 16px; height: 16px; }
+
+        /* Series Tabs */
+        .series-tabs {
+            display: flex; gap: 8px; flex-wrap: wrap;
+            justify-content: center; margin-bottom: 32px;
+        }
+        .series-tab {
+            padding: 8px 20px; border: 1px solid var(--border-gray);
+            border-radius: 50px; background: var(--white);
+            color: var(--medium-gray); font-size: 13px; font-weight: 500;
+            cursor: pointer; transition: var(--transition);
+        }
+        .series-tab:hover { border-color: var(--brand-green); color: var(--brand-green); }
+        .series-tab.active { background: var(--brand-green); color: white; border-color: var(--brand-green); }
+
+        /* ========== TECHNOLOGY ========== */
+        .technology { background: var(--dark-gray); color: white; overflow: hidden; }
+        .technology .section-label { color: var(--brand-green); }
+        .technology .section-label::before,
+        .technology .section-label::after { background: var(--brand-green); }
+        .technology .section-title { color: white; }
+        .technology .section-desc { color: rgba(255,255,255,0.6); }
+        .tech-hero {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+            align-items: center; margin-bottom: 80px;
+        }
+        .tech-visual {
+            position: relative; height: 480px; border-radius: var(--radius-xl);
+            overflow: hidden;
+        }
+        .tech-visual img {
+            width: 100%; height: 100%; object-fit: cover;
+        }
+        .tech-visual-badge {
+            position: absolute; bottom: 24px; left: 24px;
+            padding: 16px 24px; background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(20px); border-radius: var(--radius-md);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .tech-visual-badge .label { font-size: 11px; color: var(--brand-green); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
+        .tech-visual-badge .value { font-family: 'Space Grotesk', sans-serif; font-size: 24px; font-weight: 700; color: white; }
+        .tech-content { }
+        .tech-content h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 32px; font-weight: 700; margin-bottom: 20px;
+        }
+        .tech-content p { font-size: 16px; color: rgba(255,255,255,0.65); line-height: 1.8; margin-bottom: 24px; }
+        .tech-features { display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px; }
+        .tech-feature {
+            display: flex; align-items: flex-start; gap: 14px;
+        }
+        .tech-feature-icon {
+            width: 32px; height: 32px; min-width: 32px;
+            background: rgba(0,166,81,0.15); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .tech-feature-icon svg { width: 14px; height: 14px; color: var(--brand-green); }
+        .tech-feature-text { font-size: 15px; color: rgba(255,255,255,0.8); }
+        .tech-feature-text strong { color: white; font-weight: 600; }
+        .btn-tech {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 14px 32px; background: var(--brand-green); color: white;
+            border: none; border-radius: var(--radius-sm); font-size: 15px;
+            font-weight: 600; cursor: pointer; transition: var(--transition);
+        }
+        .btn-tech:hover { background: var(--brand-green-dark); transform: translateY(-2px); }
+        .btn-tech svg { width: 16px; height: 16px; }
+        .tech-cards {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+        }
+        .tech-card {
+            padding: 36px; border-radius: var(--radius-lg);
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: var(--transition);
+        }
+        .tech-card:hover { background: rgba(255,255,255,0.08); border-color: rgba(0,166,81,0.3); transform: translateY(-4px); }
+        .tech-card-icon {
+            width: 48px; height: 48px; margin-bottom: 20px;
+            background: rgba(0,166,81,0.15); border-radius: var(--radius-md);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .tech-card-icon svg { width: 22px; height: 22px; color: var(--brand-green); }
+        .tech-card h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 18px; font-weight: 700; margin-bottom: 10px;
+        }
+        .tech-card p { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.7; }
+
+        /* ========== FACTORY ========== */
+        .factory { background: var(--white); }
+        .factory-showcase {
+            display: grid; grid-template-columns: 2fr 1fr; gap: 40px;
+            margin-bottom: 64px;
+        }
+        .factory-main {
+            height: 400px; border-radius: var(--radius-xl);
+            overflow: hidden; position: relative;
+        }
+        .factory-main img {
+            width: 100%; height: 100%; object-fit: cover;
+        }
+        .factory-main-badge {
+            position: absolute; bottom: 24px; left: 24px;
+            padding: 12px 24px; background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(20px); border-radius: var(--radius-md);
+            color: white; font-size: 14px; font-weight: 500;
+        }
+        .factory-sidebar { display: flex; flex-direction: column; gap: 20px; }
+        .factory-thumb {
+            flex: 1; border-radius: var(--radius-lg); overflow: hidden;
+            position: relative; cursor: pointer;
+        }
+        .factory-thumb img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: var(--transition);
+        }
+        .factory-thumb:hover img { transform: scale(1.06); }
+        .factory-stats {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+        }
+        .stat-card {
+            text-align: center; padding: 32px 20px;
+            background: var(--light-gray); border-radius: var(--radius-lg);
+            transition: var(--transition);
+        }
+        .stat-card:hover { background: var(--brand-green-light); transform: translateY(-4px); }
+        .stat-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 40px; font-weight: 800; color: var(--brand-green);
+            line-height: 1; margin-bottom: 8px;
+        }
+        .stat-number span { font-size: 22px; font-weight: 600; }
+        .stat-label { font-size: 14px; color: var(--medium-gray); font-weight: 500; }
+        .stat-sub { font-size: 12px; color: var(--medium-gray); margin-top: 4px; opacity: 0.7; }
+        .factory-cta {
+            text-align: center; margin-top: 40px; padding: 24px;
+            background: var(--brand-green-light); border-radius: var(--radius-lg);
+            border-left: 4px solid var(--brand-green);
+        }
+        .factory-cta p {
+            font-size: 16px; color: var(--dark-gray); font-weight: 500;
+        }
+        .factory-cta strong { color: var(--brand-green); }
+
+        /* ========== CERTIFICATIONS ========== */
+        .certs { background: var(--bg-gray); }
+        .certs-track {
+            display: flex; align-items: center; justify-content: center;
+            gap: 48px; flex-wrap: wrap;
+        }
+        .cert-item {
+            display: flex; flex-direction: column; align-items: center;
+            gap: 12px; padding: 24px 32px; background: white;
+            border-radius: var(--radius-md); transition: var(--transition);
+            min-width: 140px;
+        }
+        .cert-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+        .cert-icon {
+            width: 56px; height: 56px; background: var(--light-gray);
+            border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; font-size: 11px; font-weight: 800;
+            color: var(--brand-green); font-family: 'Space Grotesk', sans-serif;
+        }
+        .cert-name { font-size: 13px; font-weight: 600; color: var(--dark-gray); text-align: center; }
+
+        /* ========== CTA SECTION ========== */
+        .cta {
+            background: linear-gradient(135deg, var(--dark-gray) 0%, #1a202c 100%);
+            color: white; text-align: center; padding: 100px 0;
+            position: relative; overflow: hidden;
+        }
+        .cta::before {
+            content: ''; position: absolute; top: -50%; right: -20%;
+            width: 600px; height: 600px; border-radius: 50%;
+            background: rgba(0,166,81,0.08);
+        }
+        .cta::after {
+            content: ''; position: absolute; bottom: -30%; left: -10%;
+            width: 400px; height: 400px; border-radius: 50%;
+            background: rgba(0,166,81,0.05);
+        }
+        .cta-content { position: relative; z-index: 1; }
+        .cta h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(28px, 3.5vw, 44px); font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .cta p { font-size: 18px; color: rgba(255,255,255,0.65); margin-bottom: 36px; }
+        .cta-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; }
+        .btn-cta-primary {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 16px 36px; background: var(--brand-green); color: white;
+            border: none; border-radius: var(--radius-sm); font-size: 16px;
+            font-weight: 600; cursor: pointer; transition: var(--transition);
+        }
+        .btn-cta-primary:hover { background: var(--brand-green-dark); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,166,81,0.35); }
+        .btn-cta-primary svg { width: 18px; height: 18px; }
+        .btn-cta-secondary {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 16px 36px; background: transparent; color: white;
+            border: 1.5px solid rgba(255,255,255,0.25); border-radius: var(--radius-sm);
+            font-size: 16px; font-weight: 500; cursor: pointer;
+            transition: var(--transition);
+        }
+        .btn-cta-secondary:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.05); }
+        .btn-cta-secondary svg { width: 18px; height: 18px; }
+        .cta-contact { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+        .cta-contact-item {
+            display: flex; align-items: center; gap: 10px;
+            font-size: 15px; color: rgba(255,255,255,0.6);
+        }
+        .cta-contact-item svg { width: 18px; height: 18px; color: var(--brand-green); }
+        .cta-contact-item a { color: rgba(255,255,255,0.8); }
+        .cta-contact-item a:hover { color: var(--brand-green); }
+
+        /* ========== FOOTER ========== */
+        .footer { background: #0f1419; color: rgba(255,255,255,0.7); padding: 80px 0 0; }
+        .footer-grid {
+            display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px;
+            padding-bottom: 60px; border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .footer-brand {}
+        .footer-logo {
+            display: flex; align-items: center; gap: 12px; margin-bottom: 20px;
+        }
+        .footer-logo-icon {
+            width: 38px; height: 38px; background: var(--brand-green);
+            border-radius: 8px; display: flex; align-items: center;
+            justify-content: center; color: white; font-weight: 800;
+            font-size: 18px; font-family: 'Space Grotesk', sans-serif;
+        }
+        .footer-logo-text {
+            font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+            font-size: 16px; color: white;
+        }
+        .footer-brand p {
+            font-size: 14px; line-height: 1.8; margin-bottom: 24px;
+            max-width: 280px;
+        }
+        .footer-social { display: flex; gap: 12px; }
+        .footer-social a {
+            width: 40px; height: 40px; border-radius: 50%;
+            background: rgba(255,255,255,0.06);
+            display: flex; align-items: center; justify-content: center;
+            transition: var(--transition);
+        }
+        .footer-social a:hover { background: var(--brand-green); }
+        .footer-social svg { width: 16px; height: 16px; color: rgba(255,255,255,0.6); }
+        .footer-social a:hover svg { color: white; }
+        .footer-col h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 14px; font-weight: 700; color: white;
+            letter-spacing: 0.5px; margin-bottom: 24px;
+            text-transform: uppercase;
+        }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 14px; }
+        .footer-col a {
+            font-size: 14px; color: rgba(255,255,255,0.55);
+            transition: var(--transition);
+        }
+        .footer-col a:hover { color: var(--brand-green); padding-left: 4px; }
+        .footer-contact-item {
+            display: flex; align-items: flex-start; gap: 12px;
+            margin-bottom: 16px;
+        }
+        .footer-contact-item svg {
+            width: 16px; height: 16px; color: var(--brand-green); margin-top: 3px;
+            flex-shrink: 0;
+        }
+        .footer-contact-item span { font-size: 14px; line-height: 1.6; }
+        .footer-bottom {
+            padding: 24px 0; display: flex; align-items: center;
+            justify-content: space-between; flex-wrap: wrap; gap: 16px;
+        }
+        .footer-bottom p { font-size: 13px; color: rgba(255,255,255,0.35); }
+        .footer-bottom-links { display: flex; gap: 24px; }
+        .footer-bottom-links a {
+            font-size: 13px; color: rgba(255,255,255,0.35);
+        }
+        .footer-bottom-links a:hover { color: rgba(255,255,255,0.7); }
+
+        /* ========== WHATSAPP FLOAT ========== */
+        .whatsapp-float {
+            position: fixed; bottom: 28px; right: 28px; z-index: 999;
+            width: 60px; height: 60px; background: #25D366;
+            border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+            cursor: pointer; transition: var(--transition);
+            animation: whatsappPulse 3s infinite;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37,211,102,0.5); }
+        .whatsapp-float svg { width: 28px; height: 28px; color: white; }
+        @keyframes whatsappPulse {
+            0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
+            50% { box-shadow: 0 4px 20px rgba(37,211,102,0.4), 0 0 0 12px rgba(37,211,102,0.1); }
+        }
+
+        /* ========== SCROLL ANIMATIONS ========== */
+        .reveal {
+            opacity: 0; transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .usp-grid { grid-template-columns: repeat(2, 1fr); }
+            .cat-grid { grid-template-columns: repeat(2, 1fr); }
+            .products-grid { grid-template-columns: repeat(2, 1fr); }
+            .tech-hero { grid-template-columns: 1fr; gap: 40px; }
+            .tech-cards { grid-template-columns: repeat(2, 1fr); }
+            .factory-showcase { grid-template-columns: 1fr; }
+            .factory-sidebar { flex-direction: row; }
+            .factory-stats { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .header-inner { padding: 0 20px; height: 64px; }
+            .nav { display: none; }
+            .mobile-toggle { display: block; }
+            .hero-content { padding: 0 20px; padding-top: 64px; }
+            .section { padding: 64px 0; }
+            .section-header { margin-bottom: 40px; }
+            .usp-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+            .usp-card { padding: 24px 16px; }
+            .usp-number { font-size: 28px; }
+            .cat-grid { grid-template-columns: 1fr; }
+            .cat-card { height: 240px; }
+            .products-grid { grid-template-columns: 1fr; }
+            .tech-cards { grid-template-columns: 1fr; }
+            .factory-sidebar { flex-direction: column; }
+            .factory-stats { grid-template-columns: 1fr 1fr; }
+            .certs-track { gap: 16px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .footer-bottom { flex-direction: column; text-align: center; }
+            .cta-buttons { flex-direction: column; align-items: center; }
+            .cta-contact { flex-direction: column; align-items: center; gap: 16px; }
+        }
+        @media (max-width: 480px) {
+            .usp-grid { grid-template-columns: 1fr; }
+            .factory-stats { grid-template-columns: 1fr; }
+            .hero-buttons { flex-direction: column; }
+            .hero-buttons .btn-primary, .hero-buttons .btn-outline { width: 100%; justify-content: center; }
+        }
+    </style>
+    <!-- SEO: hreflang -->
+    <link rel="alternate" hreflang="en" href="https://xinfengxinan.com/">
+    <link rel="alternate" hreflang="zh" href="https://xinfengxinan.com/zh/">
+    <link rel="alternate" hreflang="ru" href="https://xinfengxinan.com/ru/">
+    <link rel="alternate" hreflang="x-default" href="https://xinfengxinan.com/">
+    <!-- SEO: Open Graph -->
+    <meta property="og:title" content="XINFENG XIN'AN - Premium Eco Porcelain Pavers &amp; Eco Bricks">
+    <meta property="og:description" content="Leading manufacturer of eco porcelain pavers. Anti-slip R11-R13, frost-resistant -30°C. Patented suspension calcination technology.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xinfengxinan.com/">
+    <meta property="og:image" content="https://xinfengxinan.com/images/og-image.jpg">
+    <!-- SEO: Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="XINFENG XIN'AN - Premium Eco Porcelain Pavers">
+    <meta name="twitter:description" content="Anti-slip R11-R13 outdoor porcelain pavers. Factory-direct from China. 40 production lines, 63.46B investment.">
+    <!-- SEO: Keywords -->
+    <meta name="keywords" content="outdoor porcelain paver, eco brick, patio tile, driveway paver, pool deck tile, anti-slip tile R12, 20mm thick paver, frost resistant tile, permeable paver, China tile manufacturer">
+    <!-- SEO: JSON-LD Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "XINFENG XIN'AN",
+        "url": "https://xinfengxinan.com",
+        "description": "Premium eco porcelain pavers and eco bricks manufacturer. Patented suspension calcination technology.",
+        "foundingDate": "2024",
+        "numberOfEmployees": "2000+",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Wu'an, Hebei",
+            "addressCountry": "CN"
+        },
+        "sameAs": []
+    }
+    </script>
+</head>
+<body>
+
+<!-- ==================== HEADER ==================== -->
+<header class="header" id="header">
+    <div class="header-inner">
+        <a href="index.html" class="logo">
+            <img src="images/logo/logo.png" alt="Xinfeng Xinan" style="height:40px; width:auto;">
+        </a>
+        <nav class="nav">
+            <a href="index.html" class="active" data-i18n="nav_home">Home</a>
+            <a href="products.html" data-i18n="nav_products">Outdoor Tiles</a>
+            <a href="#technology" data-i18n="nav_technology">Technology</a>
+            <a href="#usp" data-i18n="nav_about">About</a>
+            <a href="#products" data-i18n="nav_resources">Resources</a>
+            <a href="contact.html" data-i18n="nav_contact">Contact</a>
+        </nav>
+        <div class="header-actions">
+            <button class="lang-switch" id="langSwitch">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                <span id="currentLang">EN</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-option active" data-lang="en">
+                    <span>🇬🇧</span> English
+                </div>
+                <div class="lang-option" data-lang="zh">
+                    <span>🇨🇳</span> 中文
+                </div>
+                <div class="lang-option" data-lang="ru">
+                    <span>🇷🇺</span> Русский
+                </div>
+            </div>
+            </button>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                Get Quote
+            </button>
+            <button class="mobile-toggle" id="mobileToggle">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-content">
+        <div class="hero-badge" data-i18n="hero_badge">New Factory Now Online</div>
+        <h1 data-i18n="hero_title">Premium <span class="accent">Eco Porcelain</span> Pavers</h1>
+        <p class="hero-sub" data-i18n="hero_sub">World-class outdoor paving solutions engineered with patented suspension calcination technology for unmatched durability and sustainability.</p>
+        <div class="hero-tags">
+            <span class="hero-tag">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                <span data-i18n="hero_tag1">Suspension Calcination</span>
+            </span>
+            <span class="hero-tag">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span data-i18n="hero_tag2">Dry Process Technology</span>
+            </span>
+            <span class="hero-tag">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg>
+                <span data-i18n="hero_tag3">Waste Recycling</span>
+            </span>
+        </div>
+        <div class="hero-buttons">
+            <button class="btn-primary" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+                <span data-i18n="hero_btn1">Explore Products</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+            <button class="btn-outline" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span data-i18n="hero_btn2">Contact Us</span>
+            </button>
+        </div>
+    </div>
+    <div class="hero-scroll">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+    </div>
+</section>
+
+<!-- ==================== USP ==================== -->
+<section class="section usp" id="usp">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-label" data-i18n="usp_label">Why Choose Us</div>
+            <h2 class="section-title" data-i18n="usp_title">Built for Scale. Engineered for Excellence.</h2>
+            <p class="section-desc" data-i18n="usp_desc">Backed by 63.46 billion CNY investment and cutting-edge manufacturing, we deliver world-class porcelain pavers at industrial scale.</p>
+        </div>
+        <div class="usp-grid">
+            <div class="usp-card reveal reveal-delay-1">
+                <div class="usp-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 7v1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7H3l2-4h14l2 4M5 21V10.87M19 21V10.87"/></svg>
+                </div>
+                <div class="usp-number">1,500</div>
+                <div class="usp-number-unit">MU (Acres)</div>
+                <h3 class="usp-title" data-i18n="usp1_title">Super Factory</h3>
+                <p class="usp-desc" data-i18n="usp1_desc">One of the largest dedicated porcelain paver manufacturing facilities in the world</p>
+            </div>
+            <div class="usp-card reveal reveal-delay-2">
+                <div class="usp-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                </div>
+                <div class="usp-number">40</div>
+                <div class="usp-number-unit">Production Lines</div>
+                <h3 class="usp-title" data-i18n="usp2_title">Massive Capacity</h3>
+                <p class="usp-desc" data-i18n="usp2_desc">Phase I with 12 lines under commissioning. Full capacity planned across 40 production lines</p>
+            </div>
+            <div class="usp-card reveal reveal-delay-3">
+                <div class="usp-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2zM9 9h6v6H9V9z"/></svg>
+                </div>
+                <div class="usp-number">6.35B</div>
+                <div class="usp-number-unit">CNY Investment</div>
+                <h3 class="usp-title" data-i18n="usp3_title">Patented Technology</h3>
+                <p class="usp-desc" data-i18n="usp3_desc">Proprietary suspension calcination, dry process, and multi-source waste recycling systems</p>
+            </div>
+            <div class="usp-card reveal reveal-delay-4">
+                <div class="usp-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><circle cx="6" cy="15" r="1"/><circle cx="10" cy="15" r="1"/></svg>
+                </div>
+                <div class="usp-number">20<span>mm</span></div>
+                <div class="usp-number-unit">Heavy-Duty Pavers</div>
+                <h3 class="usp-title" data-i18n="usp4_title">Premium Performance</h3>
+                <p class="usp-desc" data-i18n="usp4_desc">R12 slip resistance, -30°C frost proof, &lt;0.5% water absorption. Built to last.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== CATEGORIES ==================== -->
+<section class="section categories" id="categories">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-label" data-i18n="cat_label">Applications</div>
+            <h2 class="section-title" data-i18n="cat_title">Explore by Application</h2>
+            <p class="section-desc" data-i18n="cat_desc">Our porcelain pavers are engineered for every outdoor setting — from private gardens to commercial plazas.</p>
+        </div>
+        <div class="cat-grid">
+            <div class="cat-card reveal reveal-delay-1">
+                <img src="images/scenes/19ce0e83fae8f.png" alt="Garden & Patio" loading="lazy">
+                <div class="cat-overlay">
+                    <h3 class="cat-title" data-i18n="cat1_title">Garden & Patio</h3>
+                    <span class="cat-subtitle" data-i18n="cat1_sub">Transform outdoor living spaces</span>
+                </div>
+                <div class="cat-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div>
+            </div>
+            <div class="cat-card reveal reveal-delay-2">
+                <img src="images/scenes/19ce15069e04d.png" alt="Pool Surrounds" loading="lazy">
+                <div class="cat-overlay">
+                    <h3 class="cat-title" data-i18n="cat2_title">Pool Surrounds</h3>
+                    <span class="cat-subtitle" data-i18n="cat2_sub">Safe, slip-resistant pool decks</span>
+                </div>
+                <div class="cat-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div>
+            </div>
+            <div class="cat-card reveal reveal-delay-3">
+                <img src="images/scenes/19d4715d0a7dc.png" alt="Driveway" loading="lazy">
+                <div class="cat-overlay">
+                    <h3 class="cat-title" data-i18n="cat3_title">Driveway</h3>
+                    <span class="cat-subtitle" data-i18n="cat3_sub">Heavy-duty vehicular paving</span>
+                </div>
+                <div class="cat-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div>
+            </div>
+            <div class="cat-card reveal reveal-delay-1">
+                <img src="images/scenes/19d47a10151ef.png" alt="Commercial" loading="lazy">
+                <div class="cat-overlay">
+                    <h3 class="cat-title" data-i18n="cat4_title">Commercial Spaces</h3>
+                    <span class="cat-subtitle" data-i18n="cat4_sub">High-traffic public areas</span>
+                </div>
+                <div class="cat-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div>
+            </div>
+            <div class="cat-card reveal reveal-delay-2">
+                <img src="images/scenes/19d47c4ce09ec.png" alt="Walkways" loading="lazy">
+                <div class="cat-overlay">
+                    <h3 class="cat-title" data-i18n="cat5_title">Walkways</h3>
+                    <span class="cat-subtitle" data-i18n="cat5_sub">Pedestrian pathways & trails</span>
+                </div>
+                <div class="cat-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div>
+            </div>
+            <div class="cat-card reveal reveal-delay-3">
+                <img src="images/scenes/19d47dcf05360.png" alt="Feature Walls" loading="lazy">
+                <div class="cat-overlay">
+                    <h3 class="cat-title" data-i18n="cat6_title">Feature Walls</h3>
+                    <span class="cat-subtitle" data-i18n="cat6_sub">Vertical cladding & facades</span>
+                </div>
+                <div class="cat-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== FEATURED PRODUCTS ==================== -->
+<section class="section products" id="products">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-label" data-i18n="prod_label">Collections</div>
+            <h2 class="section-title" data-i18n="prod_title">Featured Collections</h2>
+            <p class="section-desc" data-i18n="prod_desc">Discover our most popular series — designed for beauty, built for performance.</p>
+        </div>
+        <!-- Series Tabs -->
+        <div class="series-tabs reveal" id="seriesTabs"></div>
+        <div class="products-grid" id="homeProductGrid"></div>
+        <div class="products-cta reveal">
+            <a href="products.html" class="btn-secondary">
+                <span data-i18n="view_all">View All 11 Collections</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== ECO BRICK HIGHLIGHT ==================== -->
+<section class="section" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; overflow: hidden;">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-label" style="color: #4ADE80;" data-i18n="eco_label">New Arrival</div>
+            <h2 class="section-title" style="color: white;" data-i18n="eco_title">Eco Brick Series</h2>
+            <p class="section-desc" style="color: rgba(255,255,255,0.6);" data-i18n="eco_desc">18 new eco-friendly paver designs. Sustainable materials, premium performance, exceptional value.</p>
+        </div>
+        <div class="eco-products-grid" id="ecoHomeGrid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 40px;"></div>
+        <div class="products-cta reveal">
+            <a href="products.html" class="btn-cta-primary" style="display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:var(--brand-green);color:white;border:none;border-radius:6px;font-size:16px;font-weight:600;cursor:pointer;transition:0.3s;" data-i18n="eco_cta">
+                Explore All 18 Eco Brick Products
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== TECHNOLOGY ==================== -->
+<section class="section technology" id="technology">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-label" data-i18n="tech_label">Technology</div>
+            <h2 class="section-title" data-i18n="tech_title">Advanced Manufacturing Technology</h2>
+            <p class="section-desc" data-i18n="tech_desc">Our proprietary technologies set new standards for efficiency, quality, and environmental responsibility.</p>
+        </div>
+        <div class="tech-hero reveal">
+            <div class="tech-visual">
+                <img src="images/products/1.1仿石系列/芝麻/芝麻浅灰XA360018L002.jpg" alt="Suspension Calcination Technology" loading="lazy">
+                <div class="tech-visual-badge">
+                    <div class="label">Patented</div>
+                    <div class="value">Suspension Calcination</div>
+                </div>
+            </div>
+            <div class="tech-content">
+                <h3 data-i18n="tech1_title">Suspension Calcination Technology</h3>
+                <p data-i18n="tech1_p">Our internationally pioneering suspension calcination system represents a breakthrough in ceramic manufacturing. This patented technology enables uniform heating at lower temperatures, dramatically reducing energy consumption while producing pavers with superior structural integrity.</p>
+                <div class="tech-features">
+                    <div class="tech-feature">
+                        <div class="tech-feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="tech-feature-text" data-i18n="tech1_feat1_desc"><strong>40% Energy Reduction</strong> — Lower calcination temperature with higher thermal efficiency</div>
+                    </div>
+                    <div class="tech-feature">
+                        <div class="tech-feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="tech-feature-text" data-i18n="tech1_feat2_desc"><strong>Superior Uniformity</strong> — Consistent micro-structure across every paver produced</div>
+                    </div>
+                    <div class="tech-feature">
+                        <div class="tech-feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="tech-feature-text" data-i18n="tech1_feat3_desc"><strong>Zero Wastewater</strong> — Complete dry process eliminates liquid discharge entirely</div>
+                    </div>
+                </div>
+                <button class="btn-tech">
+                    <span data-i18n="tech1_btn">Learn More</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+            </div>
+        </div>
+        <div class="tech-cards">
+            <div class="tech-card reveal reveal-delay-1">
+                <div class="tech-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+                </div>
+                <h4 data-i18n="tech2_title">Dry Process Technology</h4>
+                <p data-i18n="tech2_p">Our advanced dry manufacturing process eliminates wastewater discharge entirely, setting a new benchmark for eco-friendly production in the ceramic industry.</p>
+            </div>
+            <div class="tech-card reveal reveal-delay-2">
+                <div class="tech-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <h4 data-i18n="tech3_title">Waste Recycling</h4>
+                <p data-i18n="tech3_p">Multi-source solid waste utilization system converts industrial by-products into raw materials, supporting a circular economy and reducing landfill dependency.</p>
+            </div>
+            <div class="tech-card reveal reveal-delay-3">
+                <div class="tech-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <h4 data-i18n="tech4_title">Quality Assurance</h4>
+                <p data-i18n="tech4_p">Every paver undergoes rigorous testing — from compressive strength and slip resistance to freeze-thaw cycles — ensuring consistent quality across all batches.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== FACTORY ==================== -->
+<section class="section factory" id="factory">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-label" data-i18n="fact_label">Factory & Capacity</div>
+            <h2 class="section-title" data-i18n="fact_title">World-Class Manufacturing Facility</h2>
+            <p class="section-desc" data-i18n="fact_desc">Located in Hebei, China, our state-of-the-art factory is built for scale, speed, and sustainability.</p>
+        </div>
+        <div class="factory-showcase reveal">
+            <div class="factory-main">
+                <img src="images/products/1.8大理石系列XA612012P001拉卡拉白2.jpg" alt="Xinfeng Xin'an Factory" loading="lazy">
+                <div class="factory-main-badge">Xinfeng Industrial Park, Hebei Province</div>
+            </div>
+            <div class="factory-sidebar">
+                <div class="factory-thumb">
+                    <img src="images/scenes/19d47a53718a6.png" alt="Production Line" loading="lazy">
+                </div>
+                <div class="factory-thumb">
+                    <img src="images/scenes/19d47b5e99ff7.png" alt="Manufacturing Equipment" loading="lazy">
+                </div>
+            </div>
+        </div>
+        <div class="factory-stats">
+            <div class="stat-card reveal reveal-delay-1">
+                <div class="stat-number">1,500 <span>MU</span></div>
+                <div class="stat-label" data-i18n="fact_stat1">Factory Area</div>
+                <div class="stat-sub" data-i18n="fact_stat1_sub">Dedicated manufacturing park</div>
+            </div>
+            <div class="stat-card reveal reveal-delay-2">
+                <div class="stat-number">40 <span>Lines</span></div>
+                <div class="stat-label" data-i18n="fact_stat2">Production Lines</div>
+                <div class="stat-sub" data-i18n="fact_stat2_sub">Full-scale capacity plan</div>
+            </div>
+            <div class="stat-card reveal reveal-delay-3">
+                <div class="stat-number">6.35 <span>B</span></div>
+                <div class="stat-label" data-i18n="fact_stat3">CNY Investment</div>
+                <div class="stat-sub" data-i18n="fact_stat3_sub">Total committed capital</div>
+            </div>
+            <div class="stat-card reveal reveal-delay-4">
+                <div class="stat-number">12 <span>Lines</span></div>
+                <div class="stat-label" data-i18n="fact_stat4">Phase I Active</div>
+                <div class="stat-sub" data-i18n="fact_stat4_sub">Commissioning in progress</div>
+            </div>
+        </div>
+        <div class="factory-cta reveal">
+            <p data-i18n="fact_cta"><strong>Phase I capacity is fully pre-booked.</strong> Contact us now to secure Phase II production allocation.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== CERTIFICATIONS ==================== -->
+<section class="section certs" id="certs">
+    <div class="container">
+        <div class="section-header reveal">
+            <div class="section-label" data-i18n="cert_label">Quality & Compliance</div>
+            <h2 class="section-title" data-i18n="cert_title">Certifications & Patents</h2>
+            <p class="section-desc" data-i18n="cert_desc">Internationally certified quality you can trust.</p>
+        </div>
+        <div class="certs-track reveal">
+            <div class="cert-item">
+                <div class="cert-icon">ISO</div>
+                <div class="cert-name">ISO 9001<br><small style="color:#4A5568">Quality Management</small></div>
+            </div>
+            <div class="cert-item">
+                <div class="cert-icon">ISO</div>
+                <div class="cert-name">ISO 14001<br><small style="color:#4A5568">Environmental</small></div>
+            </div>
+            <div class="cert-item">
+                <div class="cert-icon">CE</div>
+                <div class="cert-name">CE Marking<br><small style="color:#4A5568">EU Compliance</small></div>
+            </div>
+            <div class="cert-item">
+                <div class="cert-icon" style="font-size:9px;">GREEN</div>
+                <div class="cert-name">Green Building<br><small style="color:#4A5568">Material Certified</small></div>
+            </div>
+            <div class="cert-item">
+                <div class="cert-icon" style="font-size:8px;">PAT.</div>
+                <div class="cert-name">Patent<br><small style="color:#4A5568">Suspension Calcination</small></div>
+            </div>
+            <div class="cert-item">
+                <div class="cert-icon" style="font-size:9px;">TUV</div>
+                <div class="cert-name">TUV Tested<br><small style="color:#4A5568">Performance Verified</small></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== CTA ==================== -->
+<section class="cta" id="contact">
+    <div class="container cta-content">
+        <h2 data-i18n="cta_title">Ready to Start Your Project?</h2>
+        <p data-i18n="cta_desc">Get in touch for quotes, samples, and technical support from our dedicated export team.</p>
+        <div class="cta-buttons">
+            <button class="btn-cta-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                <span data-i18n="cta_btn1">Request a Quote</span>
+            </button>
+            <button class="btn-cta-secondary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                <span data-i18n="cta_btn2">Get Free Samples</span>
+            </button>
+        </div>
+        <div class="cta-contact">
+            <div class="cta-contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                WhatsApp: +86 xxx xxxx xxxx
+            </div>
+            <div class="cta-contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <a href="mailto:export@xinfeng.com">export@xinfeng.com</a>
+            </div>
+            <div class="cta-contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                <a href="#">Alibaba Store</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <div class="footer-logo-icon">X</div>
+                    <div class="footer-logo-text">XINFENG XIN'AN</div>
+                </div>
+                <p data-i18n="footer_desc">Premium eco porcelain pavers manufactured with patented technology. Backed by Hebei Xinfeng Group's 63.46 billion CNY investment.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+                    <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                    <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+                    <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_products">Products</h4>
+                <ul>
+                    <li><a href="#">Stone Look</a></li>
+                    <li><a href="#">Wood Look</a></li>
+                    <li><a href="#">Terrazzo</a></li>
+                    <li><a href="#">Concrete Look</a></li>
+                    <li><a href="#">Pattern Series</a></li>
+                    <li><a href="#">Solid Colors</a></li>
+                    <li><a href="#">All Collections</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_support">Support</h4>
+                <ul>
+                    <li><a href="#">Installation Guide</a></li>
+                    <li><a href="#">Sample Request</a></li>
+                    <li><a href="#">Product Catalog</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Technical Specs</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer_contact">Contact</h4>
+                <div class="footer-contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Xinfeng Industrial Park<br>Hebei Province, China</span>
+                </div>
+                <div class="footer-contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <span>+86 xxx xxxx xxxx</span>
+                </div>
+                <div class="footer-contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <span>export@xinfeng.com</span>
+                </div>
+                <div style="margin-top: 16px;">
+                    <h4 style="margin-bottom: 8px; font-size: 12px;" data-i18n="footer_hours">Business Hours</h4>
+                    <p style="font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.7;" data-i18n="footer_hours_val">
+                        Mon-Fri: 9:00-18:00 CST<br>
+                        Sat: 9:00-12:00 CST
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer_rights">&copy; 2026 Xinfeng Xinan. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#" data-i18n="footer_policy">Privacy Policy</a>
+                <a href="#" data-i18n="footer_terms">Terms of Use</a>
+                <a href="#" data-i18n="footer_sitemap">Sitemap</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ==================== WHATSAPP FLOAT ==================== -->
+<a href="https://wa.me/86xxxxxxxx" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="js/i18n.js"></script>
+<script>
+    var pageTranslations = {
+        en: {
+            // Navigation
+            nav_home: "Home",
+            nav_products: "Outdoor Tiles",
+            nav_technology: "Technology",
+            nav_about: "About",
+            nav_resources: "Resources",
+            nav_contact: "Contact",
+            btn_get_quote: "Get Quote",
+
+            // Hero
+            hero_badge: "New Factory Now Online",
+            hero_title: "Premium <span class=\"accent\">Eco Porcelain</span> Pavers<span class=\"tagline\">Engineered for tomorrow. Built to last.</span>",
+            hero_sub: "World-class outdoor paving solutions engineered with patented suspension calcination technology for unmatched durability and sustainability.",
+            hero_tag1: "Suspension Calcination",
+            hero_tag2: "Dry Process Technology",
+            hero_tag3: "Waste Recycling",
+            hero_btn1: "Explore Products",
+            hero_btn2: "Contact Us",
+
+            // USP
+            usp_label: "Why Choose Us",
+            usp_title: "Built for Scale. Engineered for Excellence.",
+            usp_desc: "Backed by 63.46 billion CNY investment and cutting-edge manufacturing, we deliver world-class porcelain pavers at industrial scale.",
+            usp1_title: "Super Factory",
+            usp1_desc: "One of the largest dedicated porcelain paver manufacturing facilities in the world",
+            usp2_title: "Massive Capacity",
+            usp2_desc: "Phase I with 12 lines under commissioning. Full capacity planned across 40 production lines",
+            usp3_title: "Patented Technology",
+            usp3_desc: "Proprietary suspension calcination, dry process, and multi-source waste recycling systems",
+            usp4_title: "Premium Performance",
+            usp4_desc: "R12 slip resistance, -30°C frost proof, <0.5% water absorption. Built to last.",
+
+            // Categories
+            cat_label: "Applications",
+            cat_title: "Explore by Application",
+            cat_desc: "Our porcelain pavers are engineered for every outdoor setting — from private gardens to commercial plazas.",
+            cat1_title: "Garden & Patio",
+            cat1_sub: "Transform outdoor living spaces",
+            cat2_title: "Pool Surrounds",
+            cat2_sub: "Safe, slip-resistant pool decks",
+            cat3_title: "Driveway",
+            cat3_sub: "Heavy-duty vehicular paving",
+            cat4_title: "Commercial Spaces",
+            cat4_sub: "High-traffic public areas",
+            cat5_title: "Walkways",
+            cat5_sub: "Pedestrian pathways & trails",
+            cat6_title: "Feature Walls",
+            cat6_sub: "Vertical cladding & facades",
+
+            // Products
+            prod_label: "Collections",
+            prod_title: "Featured Collections",
+            prod_desc: "Discover our most popular series — designed for beauty, built for performance.",
+            badge_bestseller: "Best Seller",
+            badge_new: "New Arrival",
+            badge_trending: "Trending",
+            view_details: "View Details",
+            view_all: "View All 11 Collections",
+            // Eco Brick
+            eco_label: "New Arrival",
+            eco_title: "Eco Brick Series",
+            eco_desc: "23 new eco-friendly paver designs. A separate product line from our porcelain paver collections, featuring distinct materials and finishes.",
+            eco_cta: "Explore All 23 Eco Brick Products",
+
+            // Technology
+            tech_label: "Technology",
+            tech_title: "Advanced Manufacturing Technology",
+            tech_desc: "Our proprietary technologies set new standards for efficiency, quality, and environmental responsibility.",
+            tech1_title: "Suspension Calcination Technology",
+            tech1_p: "Our internationally pioneering suspension calcination system represents a breakthrough in ceramic manufacturing. This patented technology enables uniform heating at lower temperatures, dramatically reducing energy consumption while producing pavers with superior structural integrity.",
+            tech1_feat1: "40% Energy Reduction",
+            tech1_feat1_desc: "Lower calcination temperature with higher thermal efficiency",
+            tech1_feat2: "Superior Uniformity",
+            tech1_feat2_desc: "Consistent micro-structure across every paver produced",
+            tech1_feat3: "Zero Wastewater",
+            tech1_feat3_desc: "Complete dry process eliminates liquid discharge entirely",
+            tech1_btn: "Learn More",
+            tech2_title: "Dry Process Technology",
+            tech2_p: "Our advanced dry manufacturing process eliminates wastewater discharge entirely, setting a new benchmark for eco-friendly production in the ceramic industry.",
+            tech3_title: "Waste Recycling",
+            tech3_p: "Multi-source solid waste utilization system converts industrial by-products into raw materials, supporting a circular economy and reducing landfill dependency.",
+            tech4_title: "Quality Assurance",
+            tech4_p: "Every paver undergoes rigorous testing — from compressive strength and slip resistance to freeze-thaw cycles — ensuring consistent quality across all batches.",
+
+            // Factory
+            fact_label: "Factory & Capacity",
+            fact_title: "World-Class Manufacturing Facility",
+            fact_desc: "Located in Hebei, China, our state-of-the-art factory is built for scale, speed, and sustainability.",
+            fact_stat1: "Factory Area",
+            fact_stat1_sub: "Dedicated manufacturing park",
+            fact_stat2: "Production Lines",
+            fact_stat2_sub: "Full-scale capacity plan",
+            fact_stat3: "CNY Investment",
+            fact_stat3_sub: "Total committed capital",
+            fact_stat4: "Phase I Active",
+            fact_stat4_sub: "Commissioning in progress",
+            fact_cta: "<strong>Phase I capacity is fully pre-booked.</strong> Contact us now to secure Phase II production allocation.",
+
+            // Certifications
+            cert_label: "Quality & Compliance",
+            cert_title: "Certifications & Patents",
+            cert_desc: "Internationally certified quality you can trust.",
+
+            // CTA
+            cta_title: "Ready to Start Your Project?",
+            cta_desc: "Get in touch for quotes, samples, and technical support from our dedicated export team.",
+            cta_btn1: "Request a Quote",
+            cta_btn2: "Get Free Samples",
+
+            // Footer
+            footer_desc: "Premium eco porcelain pavers manufactured with patented technology. Backed by Hebei Xinfeng Group's 63.46 billion CNY investment.",
+            footer_products: "Products",
+            footer_support: "Support",
+            footer_contact: "Contact",
+            footer_hours: "Business Hours",
+            footer_hours_val: "Mon-Fri: 9:00-18:00 CST<br>Sat: 9:00-12:00 CST",
+            footer_rights: "&copy; 2026 Xinfeng Xinan. All rights reserved.",
+            footer_policy: "Privacy Policy",
+            footer_terms: "Terms of Use",
+            footer_sitemap: "Sitemap"
+        },
+                zh: {
+            // Navigation
+            nav_home: "首页",
+            nav_products: "户外砖",
+            nav_technology: "技术",
+            nav_about: "关于我们",
+            nav_resources: "资源",
+            nav_contact: "联系我们",
+            btn_get_quote: "获取报价",
+            // Hero
+            hero_badge: "新工厂现已投产",
+            hero_title: "高端 <span class=\"accent\">生态地铺石</span> 领导者<span class=\"tagline\">面向未来设计，为永恒而造</span>",
+            hero_sub: "采用专利悬浮煅烧技术打造的世界级户外铺装解决方案，兼具无与伦比的耐久性与可持续性",
+            hero_tag1: "悬浮煅烧技术",
+            hero_tag2: "干法工艺",
+            hero_tag3: "废料回收",
+            hero_btn1: "浏览产品",
+            hero_btn2: "联系我们",
+            // USP
+            usp_label: "为什么选择我们",
+            usp_title: "规模制造，卓越工程",
+            usp_desc: "依托634.6亿元投资和尖端制造能力，我们为全球提供世界级的瓷质地铺石",
+            usp1_title: "超级工厂",
+            usp1_desc: "全球最大的专业瓷质地铺石制造基地之一",
+            usp2_title: "海量产能",
+            usp2_desc: "一期12条生产线已投产，规划40条生产线",
+            usp3_title: "专利技术",
+            usp3_desc: "自主知识产权悬浮煅烧、干法工艺、多源废料回收系统",
+            usp4_title: "卓越性能",
+            usp4_desc: "R12防滑等级、-30°C抗冻、<0.5%吸水率，经久耐用",
+            // Categories
+            cat_label: "应用场景",
+            cat_title: "按应用探索",
+            cat_desc: "我们的瓷质地铺石为各种户外场景而设计——从私家花园到商业广场",
+            cat1_title: "花园和庭院",
+            cat1_sub: "改造户外生活空间",
+            cat2_title: "泳池周边",
+            cat2_sub: "安全防滑的泳池甲板",
+            cat3_title: "车道",
+            cat3_sub: "重载车辆铺装",
+            cat4_title: "商业空间",
+            cat4_sub: "高人流公共区域",
+            cat5_title: "人行道",
+            cat5_sub: "步行小径和步道",
+            cat6_title: "特色墙面",
+            cat6_sub: "垂直覆层和幕墙",
+            // Products
+            prod_label: "产品系列",
+            prod_title: "精选系列",
+            prod_desc: "探索我们最受欢迎的系列——为美观而设计，为性能而打造",
+            badge_bestseller: "畅销品",
+            badge_new: "新品上市",
+            badge_trending: "热门趋势",
+            view_details: "查看详情",
+            view_all: "查看全部11个系列",
+            // Eco Brick
+            eco_label: "新品上市",
+            eco_title: "生态砖系列",
+            eco_desc: "18款全新生态铺砖设计，可持续材料打造，兼具卓越性能与高性价比",
+            eco_cta: "探索全部18款生态砖产品",
+            // Technology
+            tech_label: "技术",
+            tech_title: "先进制造技术",
+            tech_desc: "我们的专有技术为效率、质量和环境责任设立了新标准",
+            tech1_title: "悬浮煅烧技术",
+            tech1_p: "我们国际领先的悬浮煅烧系统代表了陶瓷制造领域的突破。这项专利技术能够在较低温度下实现均匀加热，大幅降低能耗，同时生产出结构完整性更优的地铺石",
+            tech1_feat1: "节能40%",
+            tech1_feat1_desc: "更低煅烧温度，更高热效率",
+            tech1_feat2: "均匀性优异",
+            tech1_feat2_desc: "每块地铺石都具有一致的微观结构",
+            tech1_feat3: "零废水",
+            tech1_feat3_desc: "完整的干法工艺，完全消除液体排放",
+            tech1_btn: "了解更多",
+            tech2_title: "干法工艺技术",
+            tech2_p: "我们先进的干法制造工艺完全消除废水排放，为陶瓷行业树立了环保生产的新标杆",
+            tech3_title: "废料回收",
+            tech3_p: "多源固体废料利用系统将工业副产品转化为原材料，支持循环经济，减少垃圾填埋依赖",
+            tech4_title: "质量保证",
+            tech4_p: "每块地铺石都经过严格测试——从抗压强度和防滑性到冻融循环——确保所有批次的一致质量",
+            // Factory
+            fact_label: "工厂与产能",
+            fact_title: "世界级制造基地",
+            fact_desc: "我们的工厂位于中国河北，是最先进的地铺石生产基地，为规模、速度和可持续性而建造",
+            fact_stat1: "工厂面积",
+            fact_stat1_sub: "专用制造园区",
+            fact_stat2: "生产线",
+            fact_stat2_sub: "全规模产能规划",
+            fact_stat3: "投资金额",
+            fact_stat3_sub: "总承诺资本",
+            fact_stat4: "一期投产",
+            fact_stat4_sub: "正在调试中",
+            fact_cta: "<strong>一期产能已全部预售。</strong>立即联系我们以确保二期产能分配",
+            // Certifications
+            cert_label: "质量与合规",
+            cert_title: "认证与专利",
+            cert_desc: "国际认证品质，值得信赖",
+            // CTA
+            cta_title: "准备好开始您的项目了吗？",
+            cta_desc: "联系我们获取报价、样品和来自专业出口团队的技术支持",
+            cta_btn1: "请求报价",
+            cta_btn2: "获取免费样品",
+            // Footer
+            footer_desc: "采用专利技术制造的高端生态地铺石。依托河北新峰集团634.6亿元投资",
+            footer_products: "产品",
+            footer_support: "支持",
+            footer_contact: "联系我们",
+            footer_hours: "营业时间",
+            footer_hours_val: "周一至周五：9:00-18:00 CST<br>周六：9:00-12:00 CST",
+            footer_rights: "&copy; 2026 新峰新安。保留所有权利",
+            footer_policy: "隐私政策",
+            footer_terms: "使用条款",
+            footer_sitemap: "网站地图"
+        },
+        ru: {
+            // Navigation
+            nav_home: "Главная",
+            nav_products: "Уличная плитка",
+            nav_technology: "Технологии",
+            nav_about: "О нас",
+            nav_resources: "Ресурсы",
+            nav_contact: "Контакты",
+            btn_get_quote: "Запросить цену",
+
+            // Hero
+            hero_badge: "Новый завод уже работает",
+            hero_title: "Премиальные <span class=\"accent\">Экологичные Керамические</span> Плиты<span class=\"tagline\">Спроектировано для будущего. Создано на века.</span>",
+            hero_sub: "Мировые решения для наружного мощения, созданные по запатентованной технологии подвесного обжига для исключительной прочности и устойчивости.",
+            hero_tag1: "Подвесной обжиг",
+            hero_tag2: "Сухая технология",
+            hero_tag3: "Переработка отходов",
+            hero_btn1: "Просмотреть продукцию",
+            hero_btn2: "Связаться с нами",
+
+            // USP
+            usp_label: "Почему выбирают нас",
+            usp_title: "Создано для масштаба. Разработано для совершенства.",
+            usp_desc: "При поддержке инвестиций в 63,46 млрд юаней и передового производства мы поставляем керамические плиты мирового класса в промышленных масштабах.",
+            usp1_title: "Мега-завод",
+            usp1_desc: "Один из крупнейших заводов по производству керамических плит в мире",
+            usp2_title: "Огромная мощность",
+            usp2_desc: "I фаза — 12 линий в вводе в эксплуатацию. Всего запланировано 40 производственных линий",
+            usp3_title: "Запатентованная технология",
+            usp3_desc: "Собственная технология подвесного обжига, сухой процесс и системы переработки отходов",
+            usp4_title: "Превосходные характеристики",
+            usp4_desc: "Противоскольжение R12, морозостойкость -30°C, водопоглощение <0,5%. Создано на века.",
+
+            // Categories
+            cat_label: "Применение",
+            cat_title: "Выбор по применению",
+            cat_desc: "Наши керамические плиты разработаны для любых наружных условий — от частных садов до коммерческих площадей.",
+            cat1_title: "Сад и Патио",
+            cat1_sub: "Преобразите наружные жилые пространства",
+            cat2_title: "Вокруг бассейна",
+            cat2_sub: "Безопасные нескользящие покрытия",
+            cat3_title: "Подъездные пути",
+            cat3_sub: "Мощение для тяжелых нагрузок",
+            cat4_title: "Коммерческие зоны",
+            cat4_sub: "Зоны с высокой проходимостью",
+            cat5_title: "Пешеходные дорожки",
+            cat5_sub: "Тропинки и маршруты",
+            cat6_title: "Декоративные стены",
+            cat6_sub: "Вертикальная облицовка и фасады",
+
+            // Products
+            prod_label: "Коллекции",
+            prod_title: "Избранные коллекции",
+            prod_desc: "Откройте для себя наши самые популярные серии — созданные для красоты, разработанные для производительности.",
+            badge_bestseller: "Бестселлер",
+            badge_new: "Новинка",
+            badge_trending: "В тренде",
+            view_details: "Подробнее",
+            view_all: "Все 11 коллекций",
+            // Eco Brick
+            eco_label: "Новинка",
+            eco_title: "Серия Эко-плитка",
+            eco_desc: "18 новых экологичных дизайнов плитки. Устойчивые материалы, превосходные характеристики, отличная цена.",
+            eco_cta: "Все 18 продуктов Эко-плитка",
+
+            // Technology
+            tech_label: "Технологии",
+            tech_title: "Передовые производственные технологии",
+            tech_desc: "Наши запатентованные технологии устанавливают новые стандарты эффективности, качества и экологической ответственности.",
+            tech1_title: "Технология подвесного обжига",
+            tech1_p: "Наша международно признанная система подвесного обжига представляет собой прорыв в керамическом производстве.",
+            tech1_feat1: "Снижение энергопотребления на 40%",
+            tech1_feat1_desc: "Более низкая температура обжига с более высокой тепловой эффективностью",
+            tech1_feat2: "Превосходная однородность",
+            tech1_feat2_desc: "Стабильная микроструктура каждой произведенной плиты",
+            tech1_feat3: "Ноль сточных вод",
+            tech1_feat3_desc: "Полностью сухой процесс исключает жидкие сбросы",
+            tech1_btn: "Узнать больше",
+            tech2_title: "Технология сухого процесса",
+            tech2_p: "Наш передовой сухой производственный процесс полностью исключает сброс сточных вод.",
+            tech3_title: "Переработка отходов",
+            tech3_p: "Система использования многоцелевых твердых отходов превращает промышленные побочные продукты в сырье.",
+            tech4_title: "Гарантия качества",
+            tech4_p: "Каждая плита проходит строгие испытания.",
+
+            // Factory
+            fact_label: "Завод и мощность",
+            fact_title: "Производственный комплекс мирового класса",
+            fact_desc: "Расположенный в Хэбэе, Китай, наш современный завод построен для масштаба, скорости и устойчивости.",
+            fact_stat1: "Площадь завода",
+            fact_stat1_sub: "Специализированный производственный парк",
+            fact_stat2: "Производственные линии",
+            fact_stat2_sub: "План полной мощности",
+            fact_stat3: "Инвестиции (юани)",
+            fact_stat3_sub: "Общий привлеченный капитал",
+            fact_stat4: "I фаза активна",
+            fact_stat4_sub: "Ввод в эксплуатацию",
+            fact_cta: "<strong>Мощности I фазы полностью забронированы.</strong> Свяжитесь с нами сейчас.",
+
+            // Certifications
+            cert_label: "Качество и соответствие",
+            cert_title: "Сертификаты и патенты",
+            cert_desc: "Международно сертифицированное качество, которому можно доверять.",
+
+            // CTA
+            cta_title: "Готовы начать свой проект?",
+            cta_desc: "Свяжитесь с нами для получения цен, образцов и технической поддержки.",
+            cta_btn1: "Запросить цену",
+            cta_btn2: "Получить бесплатные образцы",
+
+            // Footer
+            footer_desc: "Премиальные экологичные керамические плиты, произведенные по запатентованной технологии.",
+            footer_products: "Продукция",
+            footer_support: "Поддержка",
+            footer_contact: "Контакты",
+            footer_hours: "Часы работы",
+            footer_hours_val: "Пн-Пт: 9:00-18:00 CST<br>Сб: 9:00-12:00 CST",
+            footer_rights: "&copy; 2026 Xinfeng Xinan. Все права защищены.",
+            footer_policy: "Политика конфиденциальности",
+            footer_terms: "Условия использования",
+            footer_sitemap: "Карта сайта"
+        }
+    };
+
+    // Init shared i18n module
+    I18N.init(pageTranslations);
+    
+    // Language switch function
+    function doSwitch(lang) {
+        var dict = pageTranslations[lang];
+        if (!dict) return;
+        
+        localStorage.setItem('preferred-lang', lang);
+        
+        var els = document.querySelectorAll('[data-i18n]');
+        for (var i = 0; i < els.length; i++) {
+            var el = els[i];
+            var key = el.getAttribute('data-i18n');
+            if (dict[key] !== undefined) el.innerHTML = dict[key];
+        }
+        
+        document.documentElement.lang = (lang === 'zh') ? 'zh-CN' : lang;
+        
+        document.querySelectorAll('.lang-option').forEach(function(o) { o.classList.remove('active'); });
+        document.querySelectorAll('[data-lang="' + lang + '"]').forEach(function(o) { o.classList.add('active'); });
+        var cl = document.getElementById('currentLang');
+        if (cl) cl.textContent = (lang === 'zh') ? '中文' : lang.toUpperCase();
+        
+        var dd = document.getElementById('langDropdown');
+        if (dd) dd.classList.remove('show');
+        
+        if (typeof I18N !== 'undefined' && I18N.switchLang) I18N.switchLang(lang);
+    }
+    
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Scroll reveal animation
+    const revealElements = document.querySelectorAll('.reveal');
+    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    revealElements.forEach(el => observer.observe(el));
+
+    // Counter animation
+    const statNumbers = document.querySelectorAll('.stat-number');
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                const text = el.textContent;
+                const match = text.match(/[\d,.]+/);
+                if (match) {
+                    const target = parseFloat(match[0].replace(/,/g, ''));
+                    const isDecimal = match[0].includes('.');
+                    const hasComma = match[0].includes(',');
+                    let current = 0;
+                    const duration = 2000;
+                    const start = performance.now();
+
+                    function update(now) {
+                        const elapsed = now - start;
+                        const progress = Math.min(elapsed / duration, 1);
+                        const eased = 1 - Math.pow(1 - progress, 3);
+                        current = target * eased;
+
+                        let display;
+                        if (isDecimal) {
+                            display = current.toFixed(2);
+                        } else if (hasComma) {
+                            display = Math.round(current).toLocaleString();
+                        } else {
+                            display = Math.round(current).toString();
+                        }
+
+                        const suffix = text.replace(match[0], '').trim();
+                        el.innerHTML = display + (suffix ? ' <span>' + suffix + '</span>' : '');
+
+                        if (progress < 1) requestAnimationFrame(update);
+                    }
+                    requestAnimationFrame(update);
+                }
+                counterObserver.unobserve(el);
+            }
+        });
+    }, { threshold: 0.5 });
+    statNumbers.forEach(el => counterObserver.observe(el));
+</script>
+
+<!-- Product Data & Renderer -->
+<script src="js/products-data.js"></script>
+<script src="js/products-renderer.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof PRODUCTS_DATA !== 'undefined' && typeof initSeriesTabs !== 'undefined') {
+        initSeriesTabs('seriesTabs', 'homeProductGrid');
+        renderHomeEcoBricks();
+    }
+});
+
+function renderHomeEcoBricks() {
+    var grid = document.getElementById('ecoHomeGrid');
+    if (!grid || !PRODUCTS_DATA['eco-brick']) return;
+    var products = PRODUCTS_DATA['eco-brick'].variants;
+    var html = '';
+    for (var i = 0; i < Math.min(4, products.length); i++) {
+        var v = products[i];
+        var link = 'product-detail.html?series=eco-brick&variant=' + encodeURIComponent(v.name);
+        var shortName = v.name;
+        html += '<a href="' + link + '" class="reveal" style="display:block;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04);text-decoration:none;transition:0.3s;color:white" onmouseover="this.style.transform=\'translateY(-6px)\';this.style.boxShadow=\'0 12px 40px rgba(0,0,0,0.3)\'" onmouseout="this.style.transform=\'\';this.style.boxShadow=\'\'">';
+        html += '<img src="' + v.primary + '" alt="' + v.name + '" style="width:100%;height:200px;object-fit:cover;display:block" loading="lazy">';
+        html += '<div style="padding:16px">';
+        html += '<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">';
+        html += '<span style="display:inline-block;padding:2px 8px;background:#EF4444;color:white;font-size:10px;font-weight:600;border-radius:50px">NEW</span>';
+        html += '<span style="font-size:12px;color:var(--brand-green);font-weight:600">' + v.category + '</span>';
+        html += '</div>';
+        html += '<h4 style="font-size:14px;font-weight:600;color:white;margin:4px 0">' + v.name + '</h4>';
+        html += '<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px">';
+        html += '<span style="padding:2px 6px;background:rgba(255,255,255,0.1);font-size:10px;color:rgba(255,255,255,0.6);border-radius:4px">' + v.specs.size + '</span>';
+        html += '<span style="padding:2px 6px;background:rgba(255,255,255,0.1);font-size:10px;color:rgba(255,255,255,0.6);border-radius:4px">' + v.specs.thickness + '</span>';
+        html += '<span style="padding:2px 6px;background:rgba(255,255,255,0.1);font-size:10px;color:rgba(255,255,255,0.6);border-radius:4px">' + v.specs.finish + '</span>';
+        html += '</div></div></a>';
+    }
+    grid.innerHTML = html;
+}
+</script>
+
+<!-- Language event binding (runs last, guaranteed) -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Bind lang button
+    var btn = document.getElementById('langSwitch');
+    if (btn) {
+        btn.addEventListener('click', function() {
+            var dd = document.getElementById('langDropdown');
+            if (dd) dd.classList.toggle('show');
+        });
+    }
+    
+    // Bind lang options
+    var opts = document.querySelectorAll('#langDropdown .lang-option');
+    for (var i = 0; i < opts.length; i++) {
+        (function(opt) {
+            var lang = opt.getAttribute('data-lang');
+            opt.addEventListener('click', function() {
+                try {
+                    if (typeof doSwitch === 'function') {
+                        doSwitch(lang);
+                    } else if (typeof I18N !== 'undefined' && I18N.switchLang) {
+                        I18N.switchLang(lang);
+                    } else {
+                        console.log('No switch function available');
+                    }
+                } catch(e) {
+                    console.log('Switch error:', e);
+                }
+            });
+        })(opts[i]);
+    }
+    
+    console.log('[lang-events] bound. doSwitch exists:', typeof doSwitch === 'function', 'I18N:', !!window.I18N);
+});
+</script>
+
+</body>
+</html>
