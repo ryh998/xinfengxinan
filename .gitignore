@@ -1,0 +1,29 @@
+# Build artifacts
+*.zip
+*.ps1
+*.py
+*.docx
+*.bat
+*.vbs
+
+# Development files
+extracted_*.txt
+build_plan_text.txt
+report_strategy_text.txt
+read_docx.py
+run_read.py
+generate_data.js
+generate_data.py
+
+# Temp
+unpacked_*/
+data/
+wordpress-theme/
+.workbuddy/
+node_modules/
+.vscode/
+*.log
+
+# Backup files
+*_origin*
+*_compress*
