@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    
+    <!-- Homepage -->
+    <url>
+        <loc>https://xinfengxinan.com/</loc>
+        <xhtml:link rel="alternate" hreflang="en" href="https://xinfengxinan.com/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://xinfengxinan.com/?lang=zh"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://xinfengxinan.com/?lang=ru"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://xinfengxinan.com/"/>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- Products Page -->
+    <url>
+        <loc>https://xinfengxinan.com/products.html</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Contact Page -->
+    <url>
+        <loc>https://xinfengxinan.com/contact.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Sample Request -->
+    <url>
+        <loc>https://xinfengxinan.com/sample-request.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Product Detail Pages (sample) -->
+    <url>
+        <loc>https://xinfengxinan.com/product-detail.html?series=stone-look&amp;variant=China%20Black</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://xinfengxinan.com/product-detail.html?series=eco-brick&amp;variant=Eco%20Slope%20Brick%20-%20Solid</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+</urlset>
