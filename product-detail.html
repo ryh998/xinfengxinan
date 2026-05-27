@@ -1,0 +1,555 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travertino Natural - XINFENG XIN'AN | Premium Eco Porcelain Pavers</title>
+    <meta name="description" content="Travertino Natural - Stone Look Series. 600x600mm, 20mm thick, R12 slip resistance. Classic travertine-inspired porcelain paver.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --brand-green: #00A651;
+            --brand-green-dark: #008C44;
+            --brand-green-light: #E6F7EF;
+            --dark-gray: #2D3748;
+            --medium-gray: #4A5568;
+            --light-gray: #F7FAFC;
+            --border-gray: #E2E8F0;
+            --bg-gray: #F1F5F9;
+            --white: #FFFFFF;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.1);
+            --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
+            --shadow-xl: 0 20px 60px rgba(0,0,0,0.15);
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 16px;
+            --container: 1280px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body { font-family: 'DM Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: var(--dark-gray); line-height: 1.6; background: var(--white); -webkit-font-smoothing: antialiased; }
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        img { max-width: 100%; display: block; }
+        .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+        /* HEADER */
+        .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-gray); box-shadow: var(--shadow-sm); }
+        .header-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; padding: 0 48px; max-width: 1440px; margin: 0 auto; }
+        .logo { display: flex; align-items: center; gap: 12px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; color: var(--dark-gray); }
+        .logo-icon { width: 38px; height: 38px; background: var(--brand-green); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 800; font-size: 18px; font-family: 'Space Grotesk', sans-serif; }
+        .logo-text span { color: var(--brand-green); }
+        .nav { display: flex; align-items: center; gap: 32px; }
+        .nav a { font-size: 14px; font-weight: 500; color: var(--medium-gray); letter-spacing: 0.3px; position: relative; padding: 4px 0; }
+        .nav a::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: var(--brand-green); transition: var(--transition); }
+        .nav a:hover, .nav a.active { color: var(--dark-gray); }
+        .nav a:hover::after, .nav a.active::after { width: 100%; }
+        .header-actions { display: flex; align-items: center; gap: 12px; position: relative; }
+        .btn-quote { display: inline-flex; align-items: center; gap: 8px; padding: 9px 20px; background: var(--brand-green); color: white; border: none; border-radius: var(--radius-sm); font-size: 13px; font-weight: 600; cursor: pointer; transition: var(--transition); }
+        .btn-quote:hover { background: var(--brand-green-dark); transform: translateY(-1px); }
+        .lang-switch { position: relative; display: flex; align-items: center; gap: 6px; padding: 8px 14px; border: 1px solid var(--border-gray); border-radius: var(--radius-sm); font-size: 13px; font-weight: 500; color: var(--medium-gray); cursor: pointer; background: transparent; transition: var(--transition); }
+        .lang-switch:hover { border-color: var(--brand-green); color: var(--brand-green); }
+        .lang-dropdown { display: none; position: absolute; top: 100%; right: 0; margin-top: 8px; background: white; border-radius: var(--radius-md); box-shadow: var(--shadow-lg); border: 1px solid var(--border-gray); overflow: hidden; z-index: 100; min-width: 140px; }
+        .lang-dropdown.show { display: block; }
+        .lang-option { display: flex; align-items: center; gap: 8px; padding: 10px 16px; font-size: 13px; color: var(--medium-gray); cursor: pointer; transition: var(--transition); }
+        .lang-option:hover { background: var(--brand-green-light); color: var(--brand-green); }
+        .lang-option.active { background: var(--brand-green); color: white; font-weight: 600; }
+
+        /* BREADCRUMB */
+        .breadcrumb { 
+            padding: 16px 0; 
+            background: var(--light-gray);
+            font-size: 14px;
+            color: var(--medium-gray);
+        }
+        .breadcrumb a { color: var(--brand-green); }
+        .breadcrumb .current { color: var(--dark-gray); font-weight: 600; }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            padding: 48px 0;
+        }
+        .detail-gallery {}
+        .main-image {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            background: var(--light-gray);
+            margin-bottom: 16px;
+        }
+        .main-image img { width: 100%; height: auto; display: block; }
+        .thumb-strip { display: flex; gap: 8px; overflow-x: auto; }
+        .thumb-item {
+            width: 80px; height: 80px;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+        .thumb-item.active, .thumb-item:hover { border-color: var(--brand-green); }
+        .thumb-item img { width: 100%; height: 100%; object-fit: cover; }
+
+        .detail-series {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--brand-green-light);
+            color: var(--brand-green);
+            font-size: 12px;
+            font-weight: 600;
+            border-radius: 50px;
+            margin-bottom: 12px;
+        }
+        .detail-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .detail-color-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+        .color-swatch { width: 24px; height: 24px; border-radius: 50%; border: 2px solid var(--border-gray); }
+        .color-label { font-size: 15px; color: var(--medium-gray); }
+
+        .detail-specs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 32px;
+            padding: 24px;
+            background: var(--light-gray);
+            border-radius: var(--radius-md);
+        }
+        .spec-item {}
+        .spec-label { display: block; font-size: 12px; color: var(--medium-gray); margin-bottom: 4px; }
+        .spec-value { font-size: 15px; font-weight: 600; color: var(--dark-gray); }
+
+        .detail-actions { display: flex; gap: 16px; }
+
+        .related-section { padding: 64px 0; }
+        .related-section h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            margin-bottom: 32px;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .related-card {
+            text-align: center;
+            padding: 16px;
+            border: 1px solid var(--border-gray);
+            border-radius: var(--radius-md);
+            transition: var(--transition);
+        }
+        .related-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: transparent;
+            transform: translateY(-2px);
+        }
+        .related-card img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            border-radius: var(--radius-sm);
+            margin-bottom: 12px;
+        }
+        .related-card h4 { font-size: 14px; margin-bottom: 4px; }
+        .related-color { font-size: 12px; color: var(--medium-gray); padding: 2px 8px; border-radius: 50px; }
+
+        /* CTA BUTTONS (keep existing) */
+        .btn-primary { display: inline-flex; align-items: center; gap: 10px; padding: 14px 32px; background: var(--brand-green); color: white; border: none; border-radius: var(--radius-sm); font-size: 15px; font-weight: 600; cursor: pointer; transition: var(--transition); }
+        .btn-primary:hover { background: var(--brand-green-dark); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,166,81,0.35); }
+        .btn-outline { display: inline-flex; align-items: center; gap: 10px; padding: 14px 32px; background: transparent; color: var(--brand-green); border: 2px solid var(--brand-green); border-radius: var(--radius-sm); font-size: 15px; font-weight: 600; cursor: pointer; transition: var(--transition); }
+        .btn-outline:hover { background: var(--brand-green); color: white; }
+
+        /* SCROLL ANIMATIONS */
+        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .detail-grid { gap: 40px; }
+            .related-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .header-inner { padding: 0 20px; height: 64px; }
+            .nav { display: none; }
+            .detail-grid { grid-template-columns: 1fr; gap: 32px; }
+            .related-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+    <!-- SEO: Open Graph -->
+    <meta property="og:title" content="Product Detail - XINFENG XIN'AN Porcelain Pavers">
+    <meta property="og:description" content="Premium eco porcelain paver with detailed specifications, technical data, and installation guide. R11-R13 anti-slip.">
+    <meta property="og:type" content="product">
+    <!-- SEO: JSON-LD Product (updated by JS) -->
+    <script type="application/ld+json" id="productSchema">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Xinfeng Xinan Porcelain Paver",
+        "description": "Premium eco porcelain paver",
+        "brand": { "@type": "Brand", "name": "XINFENG XIN'AN" },
+        "manufacturer": "Hebei Xinfeng Group"
+    }
+    </script>
+</head>
+<body>
+
+
+<!-- HEADER -->
+<header class="header">
+    <div class="header-inner">
+        <a href="index.html" class="logo">
+            <img src="images/logo/logo.png" alt="Xinfeng Xinan" style="height:42px; width:auto;">
+        </a>
+        <nav class="nav">
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="products.html" data-i18n="nav_products">Outdoor Tiles</a>
+            <a href="index.html#technology" data-i18n="nav_technology">Technology</a>
+            <a href="index.html#usp" data-i18n="nav_about">About</a>
+            <a href="index.html#products" data-i18n="nav_resources">Resources</a>
+            <a href="contact.html" data-i18n="nav_contact">Contact</a>
+        </nav>
+        <div class="header-actions">
+            <button class="lang-switch" id="langSwitch" onclick="document.getElementById('langDropdown').classList.toggle('show')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                <span id="currentLang">EN</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-option active" data-lang="en" onclick="doSwitch('en')"><span>EN</span> English</div>
+                <div class="lang-option" data-lang="zh" onclick="doSwitch('zh')"><span>CN</span> 中文</div>
+                <div class="lang-option" data-lang="ru" onclick="doSwitch('ru')"><span>RU</span> Русский</div>
+            </div>
+            <button class="btn-quote">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                <span data-i18n="btn_quote">Get Quote</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<div id="productDetailContainer"></div>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/86xxxxxxxx" target="_blank" style="position:fixed;bottom:28px;right:28px;z-index:999;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);cursor:pointer;transition:0.3s;animation:wp 3s infinite" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" style="width:28px;height:28px;color:white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<style>@keyframes wp{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.4)}50%{box-shadow:0 4px 20px rgba(37,211,102,0.4),0 0 0 12px rgba(37,211,102,0.1)}}</style>
+
+<script src="js/i18n.js"></script>
+<script>
+    var translations = {
+        en: {
+            nav_home: "Home", nav_products: "Outdoor Tiles", nav_technology: "Technology",
+            nav_about: "About", nav_resources: "Resources", nav_contact: "Contact",
+            btn_quote: "Get Quote",
+            breadcrumb_home: "Home", breadcrumb_products: "Outdoor Tiles",
+            series_tag: "Stone Look Series",
+            product_name: "Travertino Natural",
+            product_desc: "Classic travertine-inspired porcelain paver with natural veining patterns. Crafted with our patented suspension calcination technology for superior durability and timeless beauty. Ideal for patios, pool surrounds, and walkways.",
+            rating_reviews: "(128 reviews) |",
+            rating_moq: "MOQ: 500 sqm",
+            spec_title: "Product Specifications",
+            spec_series: "Series", spec_sizes: "Available Sizes", spec_thickness: "Thickness",
+            spec_surface: "Surface Finish", spec_slip: "Slip Resistance", spec_water: "Water Absorption",
+            spec_frost: "Frost Resistance", spec_compress: "Compressive Strength", spec_bending: "Bending Strength",
+            spec_colors: "Colors Available", spec_packaging: "Packaging",
+            color_title: "Select Color",
+            color_beige: "Beige", color_walnut: "Walnut", color_ivory: "Ivory",
+            color_dark: "Dark", color_grey: "Grey",
+            size_title: "Select Size",
+            app_patio: "Patio / Garden", app_pool: "Pool Surround", app_walkway: "Walkway", app_balcony: "Balcony",
+            btn_get_quote: "Get Quote", btn_samples: "Get Free Samples", btn_catalog: "Download Catalog",
+            tab_desc: "Description", tab_tech: "Technical Data", tab_install: "Installation", tab_faq: "FAQ",
+            desc_title: "Product Description",
+            desc_p1: "The Travertino Natural is a premium stone-look porcelain paver that faithfully reproduces the timeless beauty of natural travertine. Manufactured using our patented suspension calcination technology, this paver delivers exceptional durability while maintaining the authentic aesthetic of natural stone.",
+            desc_p2: "Available in five carefully curated colors \u2014 Beige, Walnut, Ivory, Dark, and Grey \u2014 the Travertino Natural collection offers versatile design options for any outdoor project. The textured surface provides R12 slip resistance, making it safe for wet areas including pool surrounds.",
+            feat1_title: "Patented Technology", feat1_desc: "Suspension calcination for superior structural integrity",
+            feat2_title: "R12 Slip Resistance", feat2_desc: "Safe for all outdoor environments, including wet areas",
+            feat3_title: "Frost Proof", feat3_desc: "Withstands temperatures down to -30\u00B0C",
+            feat4_title: "Low Water Absorption", feat4_desc: "Less than 0.5% \u2014 virtually impervious to moisture",
+            tech_title: "Technical Specifications",
+            tech_standard: "Product Standard", tech_weight: "Dry Weight", tech_absorption: "Water Absorption",
+            tech_comp: "Compressive Strength", tech_bend: "Bending Strength", tech_modulus: "Modulus of Rupture",
+            tech_slip: "Slip Resistance", tech_frost: "Frost Resistance", tech_thermal: "Thermal Shock",
+            tech_chemical: "Chemical Resistance", tech_scratch: "Scratch Resistance", tech_dim: "Dimensions Tolerance",
+            tech_flat: "Surface Flatness", tech_fire: "Fire Rating",
+            install_title: "Installation Guide",
+            install_sub: "Sub-base Preparation:",
+            install_sub_desc: "Ensure a stable, well-compacted base. For pedestrian use, a minimum 100mm compacted granular sub-base is recommended. For vehicular traffic, a minimum 150mm compacted sub-base with concrete base is required.",
+            install_method: "Laying Methods:",
+            install_m1: "1. Sand/Cement Bed \u2014 Traditional method using a 30-50mm mortar bed on a prepared base.",
+            install_m2: "2. Pedestal System \u2014 Raised installation using adjustable pedestals, ideal for rooftops and balconies with drainage requirements.",
+            install_m3: "3. Adhesive Bonding \u2014 For concrete substrates, use a flexible tile adhesive rated for outdoor use.",
+            install_joint: "Joints:", install_joint_desc: "Recommended joint width 3-5mm. Use a weather-resistant grout suitable for outdoor applications.",
+            install_note: "Important:", install_note_desc: "Always follow local building codes and standards. For large commercial projects, consult with our technical team for project-specific guidance.",
+            faq_title: "Frequently Asked Questions",
+            faq_q1: "What is the minimum order quantity (MOQ)?",
+            faq_a1: "Our standard MOQ is 500 sqm per color and size. For mixed orders, please contact us for custom quotes.",
+            faq_q2: "Do you provide samples?",
+            faq_a2: "Yes, we offer free samples (shipping cost may apply). Please request samples through our contact form or WhatsApp.",
+            faq_q3: "What is the lead time?",
+            faq_a3: "Standard production lead time is 15-20 days after order confirmation, plus shipping time. Exact timing depends on order volume and current production schedule.",
+            faq_q4: "Can the pavers be used for driveways?",
+            faq_a4: "Yes, our 20mm pavers are suitable for residential driveways. For heavy commercial vehicular traffic, please consult our technical team for load-bearing specifications.",
+            faq_q5: "What certifications do your products have?",
+            faq_a5: "Our products are certified to ISO 9001, ISO 14001, CE Marking, and Green Building Material standards. Test reports are available upon request.",
+            related_title: "You May Also Like",
+            related_view_all: "View All Products \u2192",
+            rp1_series: "Wood Look", rp1_name: "French Oak Premium",
+            rp2_series: "Terrazzo", rp2_name: "Venetian Terrazzo",
+            rp3_series: "Concrete Look", rp3_name: "Urban Concrete Grey",
+            rp4_series: "Marble", rp4_name: "Carrara Marble",
+            spec_size: "Size",
+            spec_thickness: "Thickness", spec_color: "Color",
+            spec_finish: "Finish",
+            spec_model: "Model",
+            spec_absorption: "Water Absorption",
+            detail_inquiry: "Send Inquiry",
+            detail_sample: "Request Sample",
+            meta_description: "Travertino Natural - Stone Look Series. 600x600mm, 20mm thick, R12 slip resistance. Classic travertine-inspired porcelain paver.",
+            page_title_full: "Travertino Natural - XINFENG XIN'AN | Premium Eco Porcelain Pavers"
+        },
+        zh: {
+            nav_home: "\u9996\u9875", nav_products: "\u6237\u5916\u7816", nav_technology: "\u6280\u672F\u5DE5\u827A",
+            nav_about: "\u5173\u4E8E\u6211\u4EEC", nav_resources: "\u8D44\u6E90\u4E2D\u5FC3", nav_contact: "\u8054\u7CFB\u6211\u4EEC",
+            btn_quote: "\u83B7\u53D6\u62A5\u4EF7",
+            breadcrumb_home: "\u9996\u9875", breadcrumb_products: "\u4EA7\u54C1\u4E2D\u5FC3",
+            series_tag: "\u77F3\u6750\u9762\u7CFB\u5217",
+            product_name: "\u6D1E\u77F3\u5929\u7136\u7CFB\u5217",
+            product_desc: "\u7ECF\u5178\u6D1E\u77F3\u7EB9\u7406\u7684\u74F7\u8D28\u94FA\u77F3\uFF0C\u5929\u7136\u7EB9\u7406\u81EA\u7136\u7F8E\u89C2\u3002\u91C7\u7528\u81EA\u4E3B\u7814\u53D1\u7684\u60AC\u6D6E\u715E\u70E7\u4E13\u5229\u6280\u672F\uFF0C\u517C\u5177\u5353\u8D8A\u8010\u4E45\u6027\u4E0E\u7ECF\u5178\u7F8E\u5B66\u3002\u9002\u7528\u4E8E\u5EAD\u9662\u3001\u6CF3\u6C60\u5468\u8FB9\u548C\u6B65\u9053\u3002",
+            rating_reviews: "\uFF08128\u6761\u8BC4\u4EF7\uFF09|",
+            rating_moq: "\u8D77\u8BA2\u91CF\uFF1A500\u5E73\u65B9\u7C73",
+            spec_title: "\u4EA7\u54C1\u89C4\u683C",
+            spec_series: "\u7CFB\u5217", spec_sizes: "\u53EF\u9009\u5C3A\u5BF8", spec_thickness: "\u539A\u5EA6",
+            spec_surface: "\u8868\u9762\u5904\u7406", spec_slip: "\u9632\u6ED1\u7B49\u7EA7", spec_water: "\u5438\u6C34\u7387",
+            spec_frost: "\u6297\u51BB\u6027", spec_compress: "\u6297\u538B\u5F3A\u5EA6", spec_bending: "\u6297\u6298\u5F3A\u5EA6",
+            spec_colors: "\u53EF\u9009\u989C\u8272", spec_packaging: "\u5305\u88C5\u65B9\u5F0F",
+            color_title: "\u9009\u62E9\u989C\u8272",
+            color_beige: "\u7C73\u8272", color_walnut: "\u80E1\u6843\u8272", color_ivory: "\u8C61\u7259\u767D",
+            color_dark: "\u6DF1\u8272", color_grey: "\u7070\u8272",
+            size_title: "\u9009\u62E9\u5C3A\u5BF8",
+            app_patio: "\u5EAD\u9662/\u82B1\u56ED", app_pool: "\u6CF3\u6C60\u5468\u8FB9", app_walkway: "\u6B65\u9053", app_balcony: "\u9633\u53F0",
+            btn_get_quote: "\u83B7\u53D6\u62A5\u4EF7", btn_samples: "\u83B7\u53D6\u514D\u8D39\u6837\u54C1", btn_catalog: "\u4E0B\u8F7D\u4EA7\u54C1\u76EE\u5F55",
+            tab_desc: "\u4EA7\u54C1\u63CF\u8FF0", tab_tech: "\u6280\u672F\u53C2\u6570", tab_install: "\u5B89\u88C5\u6307\u5357", tab_faq: "\u5E38\u89C1\u95EE\u9898",
+            desc_title: "\u4EA7\u54C1\u63CF\u8FF0",
+            desc_p1: "\u6D1E\u77F3\u5929\u7136\u7CFB\u5217\u662F\u4E00\u6B3E\u9AD8\u7AEF\u77F3\u6750\u7EB9\u74F7\u8D28\u94FA\u77F3\uFF0C\u771F\u5B9E\u8FD8\u539F\u5929\u7136\u6D1E\u77F3\u7684\u6C38\u6052\u4E4B\u7F8E\u3002\u91C7\u7528\u81EA\u4E3B\u7814\u53D1\u7684\u60AC\u6D6E\u715E\u70E7\u4E13\u5229\u6280\u672F\u5236\u9020\uFF0C\u517C\u5177\u5353\u8D8A\u7684\u8010\u4E45\u6027\u548C\u5929\u7136\u77F3\u6750\u7684\u539F\u59CB\u7F8E\u611F\u3002",
+            desc_p2: "\u6D1E\u77F3\u5929\u7136\u7CFB\u5217\u7CBE\u9009\u4E94\u79CD\u7ECF\u5178\u8272\u5F69\u2014\u2014\u7C73\u8272\u3001\u80E1\u6843\u8272\u3001\u8C61\u7259\u767D\u3001\u6DF1\u8272\u548C\u7070\u8272\uFF0C\u4E3A\u5404\u7C7B\u6237\u5916\u9879\u76EE\u63D0\u4F9B\u4E30\u5BCC\u7684\u8BBE\u8BA1\u9009\u62E9\u3002\u7EB9\u7406\u8868\u9762\u8FBE\u5230R12\u9632\u6ED1\u7B49\u7EA7\uFF0C\u5373\u4F7F\u5728\u6CF3\u6C60\u5468\u8FB9\u7B49\u6E7F\u6ED1\u73AF\u5883\u4E5F\u80FD\u786E\u4FDD\u5B89\u5168\u3002",
+            feat1_title: "\u4E13\u5229\u6280\u672F", feat1_desc: "\u60AC\u6D6E\u715E\u70E7\u5DE5\u827A\uFF0C\u7ED3\u6784\u5F3A\u5EA6\u66F4\u4F18\u8D8A",
+            feat2_title: "R12\u9632\u6ED1\u7B49\u7EA7", feat2_desc: "\u9002\u7528\u4E8E\u6240\u6709\u6237\u5916\u73AF\u5883\uFF0C\u5305\u62EC\u6E7F\u6ED1\u533A\u57DF",
+            feat3_title: "\u6297\u51BB\u6027\u80FD", feat3_desc: "\u53EF\u8010\u53D7\u4F4E\u81F3-30\u00B0C\u7684\u6781\u7AEF\u6E29\u5EA6",
+            feat4_title: "\u8D85\u4F4E\u5438\u6C34\u7387", feat4_desc: "\u4F4E\u4E8E0.5%\uFF0C\u51E0\u4E4E\u4E0D\u900F\u6C34",
+            tech_title: "\u6280\u672F\u89C4\u683C",
+            tech_standard: "\u4EA7\u54C1\u6807\u51C6", tech_weight: "\u5E72\u91CD", tech_absorption: "\u5438\u6C34\u7387",
+            tech_comp: "\u6297\u538B\u5F3A\u5EA6", tech_bend: "\u6297\u6298\u5F3A\u5EA6", tech_modulus: "\u65AD\u88C2\u6A21\u6570",
+            tech_slip: "\u9632\u6ED1\u7B49\u7EA7", tech_frost: "\u6297\u51BB\u6027", tech_thermal: "\u6297\u70ED\u9707\u6027",
+            tech_chemical: "\u8010\u5316\u5B66\u6027", tech_scratch: "\u8010\u522E\u64E6\u6027", tech_dim: "\u5C3A\u5BF8\u504F\u5DEE",
+            tech_flat: "\u8868\u9762\u5E73\u6574\u5EA6", tech_fire: "\u9632\u706B\u7B49\u7EA7",
+            install_title: "\u5B89\u88C5\u6307\u5357",
+            install_sub: "\u57FA\u5C42\u51C6\u5907\uFF1A",
+            install_sub_desc: "\u786E\u4FDD\u57FA\u5C42\u7A33\u5B9A\u4E14\u5145\u5206\u538B\u5B9E\u3002\u4EBA\u884C\u533A\u57DF\u5EFA\u8BAE\u6700\u5C0F100mm\u7EA7\u914D\u788E\u77F3\u57FA\u5C42\u3002\u8F66\u8F86\u901A\u884C\u533A\u57DF\u9700\u6700\u5C0F150mm\u538B\u5B9E\u57FA\u5C42\u52A0\u6DF7\u51DD\u571F\u5E95\u677F\u3002",
+            install_method: "\u94FA\u8BBE\u65B9\u5F0F\uFF1A",
+            install_m1: "1. \u7802/\u6C34\u6CE5\u57AB\u5C42 \u2014 \u4F20\u7EDF\u5DE5\u6CD5\uFF0C\u5728\u51C6\u5907\u597D\u7684\u57FA\u5C42\u4E0A\u94FA\u8BBE30-50mm\u7802\u6D46\u5C42\u3002",
+            install_m2: "2. \u652F\u6491\u7CFB\u7EDF \u2014 \u4F7F\u7528\u53EF\u8C03\u8282\u652F\u6491\u4EF6\u7684\u67B6\u7A7A\u5B89\u88C5\u65B9\u5F0F\uFF0C\u9002\u7528\u4E8E\u6709\u6392\u6C34\u9700\u6C42\u7684\u5C4B\u9876\u548C\u9633\u53F0\u3002",
+            install_m3: "3. \u80F6\u7C98\u6CD5 \u2014 \u9002\u7528\u4E8E\u6DF7\u51DD\u571F\u57FA\u9762\uFF0C\u4F7F\u7528\u6237\u5916\u4E13\u7528\u7684\u67D4\u6027\u74F7\u7816\u80F6\u3002",
+            install_joint: "\u586B\u7F1D\uFF1A", install_joint_desc: "\u5EFA\u8BAE\u7F1D\u5BBD3-5mm\uFF0C\u4F7F\u7528\u9002\u5408\u6237\u5916\u5E94\u7528\u7684\u8010\u5019\u6027\u586B\u7F1D\u5242\u3002",
+            install_note: "\u91CD\u8981\u63D0\u793A\uFF1A", install_note_desc: "\u8BF7\u59CB\u7EC8\u9075\u5FAA\u5F53\u5730\u5EFA\u7B51\u89C4\u8303\u548C\u6807\u51C6\u3002\u5927\u578B\u5546\u4E1A\u9879\u76EE\u8BF7\u54A8\u8BE2\u6211\u4EEC\u7684\u6280\u672F\u56E2\u961F\u83B7\u53D6\u9879\u76EE\u4E13\u5C5E\u6307\u5BFC\u3002",
+            faq_title: "\u5E38\u89C1\u95EE\u9898",
+            faq_q1: "\u6700\u5C0F\u8D77\u8BA2\u91CF\uFF08MOQ\uFF09\u662F\u591A\u5C11\uFF1F",
+            faq_a1: "\u6807\u51C6\u8D77\u8BA2\u91CF\u4E3A\u6BCF\u4E2A\u989C\u8272\u548C\u5C3A\u5BF8500\u5E73\u65B9\u7C73\u3002\u6DF7\u5408\u8BA2\u5355\u8BF7\u8054\u7CFB\u6211\u4EEC\u83B7\u53D6\u5B9A\u5236\u62A5\u4EF7\u3002",
+            faq_q2: "\u4F60\u4EEC\u63D0\u4F9B\u6837\u54C1\u5417\uFF1F",
+            faq_a2: "\u662F\u7684\uFF0C\u6211\u4EEC\u63D0\u4F9B\u514D\u8D39\u6837\u54C1\uFF08\u8FD0\u8D39\u53EF\u80FD\u53E6\u8BA1\uFF09\u3002\u8BF7\u901A\u8FC7\u8054\u7CFB\u8868\u5355\u6216WhatsApp\u7D22\u53D6\u6837\u54C1\u3002",
+            faq_q3: "\u4EA4\u8D27\u5468\u671F\u662F\u591A\u4E45\uFF1F",
+            faq_a3: "\u6807\u51C6\u751F\u4EA7\u5468\u671F\u4E3A\u8BA2\u5355\u786E\u8BA4\u540E15-20\u5929\uFF0C\u53E6\u52A0\u8FD0\u8F93\u65F6\u95F4\u3002\u786E\u5207\u65F6\u95F4\u53D6\u51B3\u4E8E\u8BA2\u5355\u91CF\u548C\u5F53\u524D\u751F\u4EA7\u8BA1\u5212\u3002",
+            faq_q4: "\u94FA\u77F3\u53EF\u4EE5\u7528\u4E8E\u8F66\u9053\u5417\uFF1F",
+            faq_a4: "\u53EF\u4EE5\uFF0C\u6211\u4EEC\u768420mm\u94FA\u77F3\u9002\u7528\u4E8E\u4F4F\u5B85\u8F66\u9053\u3002\u91CD\u578B\u5546\u4E1A\u8F66\u8F86\u901A\u884C\u8BF7\u54A8\u8BE2\u6280\u672F\u56E2\u961F\u83B7\u53D6\u627F\u8F7D\u89C4\u683C\u3002",
+            faq_q5: "\u4F60\u4EEC\u7684\u4EA7\u54C1\u6709\u54EA\u4E9B\u8BA4\u8BC1\uFF1F",
+            faq_a5: "\u6211\u4EEC\u7684\u4EA7\u54C1\u901A\u8FC7ISO 9001\u3001ISO 14001\u3001CE\u8BA4\u8BC1\u53CA\u7EFF\u8272\u5EFA\u6750\u6807\u51C6\u8BA4\u8BC1\u3002\u68C0\u6D4B\u62A5\u544A\u53EF\u5E94\u8981\u6C42\u63D0\u4F9B\u3002",
+            related_title: "\u60A8\u53EF\u80FD\u8FD8\u559C\u6B22",
+            related_view_all: "\u67E5\u770B\u5168\u90E8\u4EA7\u54C1 \u2192",
+            rp1_series: "\u6728\u7EB9\u9762", rp1_name: "\u6CD5\u5F0F\u6A61\u6728\u7CFB\u5217",
+            rp2_series: "\u6C34\u78E8\u77F3", rp2_name: "\u5A01\u5C3C\u65AF\u6C34\u78E8\u77F3",
+            rp3_series: "\u6C34\u6CE5\u9762", rp3_name: "\u90FD\u5E02\u6DF7\u51DD\u571F\u7070",
+            rp4_series: "\u5927\u7406\u77F3\u7EB9", rp4_name: "\u5361\u62C9\u62C9\u5927\u7406\u77F3",
+            spec_size: "\u5C3A\u5BF8",
+            spec_thickness: "\u539A\u5EA6", spec_color: "\u989C\u8272",
+            spec_finish: "\u8868\u9762\u5904\u7406",
+            spec_model: "\u578B\u53F7",
+            spec_absorption: "\u5438\u6C34\u7387",
+            detail_inquiry: "\u53D1\u9001\u8BE2\u76D8",
+            detail_sample: "\u7D22\u53D6\u6837\u54C1",
+            meta_description: "Travertino Natural - Stone Look Series. 600x600mm, 20mm thick, R12 slip resistance. Classic travertine-inspired porcelain paver.",
+            page_title_full: "Travertino Natural - XINFENG XIN'AN | Premium Eco Porcelain Pavers"
+        },
+        ru: {
+            nav_home: "Главная", nav_products: "Уличная плитка", nav_technology: "Технологии",
+            nav_about: "О нас", nav_resources: "Ресурсы", nav_contact: "Контакты",
+            btn_quote: "Запросить цену",
+            breadcrumb_home: "Главная", breadcrumb_products: "Продукция",
+            series_tag: "Серия Камень",
+            product_name: "Травертино Натуральный",
+            product_desc: "Классическая керамическая плита с текстурой травертина. Создана по запатентованной технологии подвесного обжига для исключительной прочности. Идеально для патио, бассейнов и дорожек.",
+            rating_reviews: "(128 отзывов) |",
+            rating_moq: "МОЗ: 500 кв.м",
+            spec_title: "Технические характеристики",
+            spec_series: "Серия", spec_sizes: "Доступные размеры", spec_thickness: "Толщина",
+            spec_surface: "Отделка поверхности", spec_slip: "Противоскольжение", spec_water: "Водопоглощение",
+            spec_frost: "Морозостойкость", spec_compress: "Прочность на сжатие", spec_bending: "Прочность на изгиб",
+            spec_colors: "Доступные цвета", spec_packaging: "Упаковка",
+            color_title: "Выбрать цвет",
+            color_beige: "Бежевый", color_walnut: "Орех", color_ivory: "Слоновая кость",
+            color_dark: "Темный", color_grey: "Серый",
+            size_title: "Выбрать размер",
+            app_patio: "Патио / Сад", app_pool: "Бассейн", app_walkway: "Дорожка", app_balcony: "Балкон",
+            btn_get_quote: "Запросить цену", btn_samples: "Получить бесплатные образцы", btn_catalog: "Скачать каталог",
+            tab_desc: "Описание", tab_tech: "Технические данные", tab_install: "Монтаж", tab_faq: "FAQ",
+            desc_title: "Описание продукта",
+            desc_p1: "Травертино Натуральный - это премиальная керамическая плита под камень. Произведена по запатентованной технологии подвесного обжига.",
+            desc_p2: "Доступна в пяти цветах - Бежевый, Орех, Слоновая Кость, Темный и Серый. R12.",
+            feat1_title: "Запатентованная технология", feat1_desc: "Подвесной обжиг для прочности",
+            feat2_title: "R12 Противоскольжение", feat2_desc: "Безопасно для всех наружных помещений",
+            feat3_title: "Морозостойкость", feat3_desc: "Выдерживает температуру до -30°C",
+            feat4_title: "Низкое водопоглощение", feat4_desc: "Менее 0.5% - практически непроницаемо",
+            tech_title: "Технические характеристики",
+            tech_standard: "Стандарт", tech_weight: "Сухой вес", tech_absorption: "Водопоглощение",
+            tech_comp: "Прочность на сжатие", tech_bend: "Прочность на изгиб", tech_modulus: "Модуль разрушения",
+            tech_slip: "Противоскольжение", tech_frost: "Морозостойкость", tech_thermal: "Термоудар",
+            tech_chemical: "Химическая стойкость", tech_scratch: "Стойкость к царапинам", tech_dim: "Допуски размеров",
+            tech_flat: "Плоскостность", tech_fire: "Пожарная безопасность",
+            install_title: "Руководство по монтажу",
+            install_sub: "Подготовка основания:",
+            install_sub_desc: "Обеспечьте стабильное основание. Для пешеходов минимум 100мм уплотненного основания.",
+            install_method: "Методы укладки:",
+            install_m1: "1. Песчано-цементная подушка - слой 30-50мм раствора.",
+            install_m2: "2. Регулируемые опоры - для кровель и балконов.",
+            install_m3: "3. Клеевая фиксация - для бетонных оснований.",
+            install_joint: "Швы:", install_joint_desc: "Рекомендуемая ширина шва 3-5мм.",
+            install_note: "Важно:", install_note_desc: "Соблюдайте местные строительные нормы.",
+            faq_title: "Часто задаваемые вопросы",
+            faq_q1: "Каков минимальный объем заказа (МОЗ)?",
+            faq_a1: "Стандартный МОЗ - 500 кв.м на цвет и размер.",
+            faq_q2: "Предоставляете ли вы образцы?",
+            faq_a2: "Да, мы предоставляем бесплатные образцы.",
+            faq_q3: "Каков срок поставки?",
+            faq_a3: "Стандартный срок 15-20 дней после подтверждения заказа.",
+            faq_q4: "Можно ли использовать для подъездных путей?",
+            faq_a4: "Да, наши 20мм плиты подходят для жилых подъездов.",
+            faq_q5: "Какие сертификаты имеются?",
+            faq_a5: "ISO 9001, ISO 14001, CE маркировка.",
+            related_title: "Вам также может понравиться",
+            related_view_all: "Все товары →",
+            rp1_series: "Древесина", rp1_name: "Французский дуб",
+            rp2_series: "Терраццо", rp2_name: "Венецианский терраццо",
+            rp3_series: "Бетон", rp3_name: "Городской бетон серый",
+            rp4_series: "Мрамор", rp4_name: "Каррарский мрамор",
+            spec_size: "Размер",
+            spec_thickness: "Толщина", spec_color: "Цвет",
+            spec_finish: "Отделка",
+            spec_model: "Модель",
+            spec_absorption: "Водопоглощение",
+            detail_inquiry: "Отправить запрос",
+            detail_sample: "Запросить образец"
+        }
+    };
+
+    I18N.init(translations);
+    
+    // Direct language switch
+    function doSwitch(lang) {
+        var dict = translations[lang];
+        if (!dict) return;
+        localStorage.setItem('preferred-lang', lang);
+        document.querySelectorAll('[data-i18n]').forEach(function(el) {
+            var k = el.getAttribute('data-i18n');
+            if (dict[k] !== undefined) el.innerHTML = dict[k];
+        });
+        document.documentElement.lang = (lang === 'zh') ? 'zh-CN' : lang;
+        document.querySelectorAll('.lang-option').forEach(function(o) { o.classList.remove('active'); });
+        document.querySelectorAll('[data-lang="' + lang + '"]').forEach(function(o) { o.classList.add('active'); });
+        var cl = document.getElementById('currentLang');
+        if (cl) cl.textContent = (lang === 'zh') ? '中文' : lang.toUpperCase();
+        var dd = document.getElementById('langDropdown');
+        if (dd) dd.classList.remove('show');
+        if (typeof I18N !== 'undefined' && I18N.switchLang) I18N.switchLang(lang);
+        
+            }
+    
+    // Fix lang button
+    var ls = document.getElementById('langSwitch');
+    if (ls) { ls.setAttribute('onclick', "document.getElementById('langDropdown').classList.toggle('show')"); }
+
+    function switchGalleryImg(el, src) {
+        const main = document.getElementById('galleryMainImg');
+        if (main) main.src = src;
+        document.querySelectorAll('.gallery-thumb').forEach(t => t.classList.remove('active'));
+        el.classList.add('active');
+    }
+
+    // Dynamic product loading
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof PRODUCTS_DATA === 'undefined' || typeof getUrlParam === 'undefined') return;
+        
+        const seriesId = getUrlParam('series');
+        const variantName = getUrlParam('variant');
+        
+        let product = null;
+        if (seriesId && variantName && typeof getProductBySeriesAndName !== 'undefined') {
+            product = getProductBySeriesAndName(seriesId, variantName);
+        }
+        if (!product && typeof getAllProducts !== 'undefined') {
+            const all = getAllProducts();
+            product = all[0];
+        }
+        
+        if (product) {
+            renderProductDetail(product);
+        }
+    });
+</script>
+
+<script src="js/products-data.js"></script>
+<script src="js/products-renderer.js"></script>
+<script>
+// Direct render (after all dependencies loaded)
+var _dt = document.getElementById('productDetailContainer');
+if (!_dt) {
+    document.body.innerHTML += '<div style="padding:20px;color:red">ERROR: productDetailContainer not found!</div>';
+} else {
+    var hasPD = typeof PRODUCTS_DATA !== 'undefined';
+    var hasGP = typeof getUrlParam !== 'undefined';
+    var hasRD = typeof renderProductDetail !== 'undefined';
+    var hasGS = typeof getProductBySeriesAndName !== 'undefined';
+    _dt.innerHTML = '<div style="padding:20px">DEBUG: PD='+hasPD+' GP='+hasGP+' RD='+hasRD+' GS='+hasGS+' | url='+window.location.search+'</div>';
+    
+    if (hasPD && hasGP && hasRD && hasGS) {
+        var seriesId = getUrlParam('series');
+        var variantName = getUrlParam('variant');
+        _dt.innerHTML += '<br>series='+seriesId+' variant='+variantName;
+        var product = getProductBySeriesAndName(seriesId, variantName);
+        if (product) {
+            try { renderProductDetail(product); _dt.innerHTML += '<br>RENDER OK'; }
+            catch(e) { _dt.innerHTML += '<br>RENDER ERROR: '+e.message; }
+        } else {
+            _dt.innerHTML += '<br>PRODUCT NOT FOUND for series='+seriesId+' variant='+variantName;
+            _dt.innerHTML += '<br>Available: ';
+            if (PRODUCTS_DATA[seriesId]) PRODUCTS_DATA[seriesId].variants.forEach(function(v){ _dt.innerHTML += '"'+v.name+'" '; });
+        }
+    }
+}
+</script>
+</body>
+</html>
