@@ -1,0 +1,1044 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - XINFENG XIN'AN | Premium Eco Porcelain Pavers</title>
+    <meta name="description" content="Browse our complete range of eco porcelain pavers. Filter by size, thickness, surface, color and application. 10 collections available.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --brand-green: #00A651;
+            --brand-green-dark: #008C44;
+            --brand-green-light: #E6F7EF;
+            --dark-gray: #2D3748;
+            --medium-gray: #4A5568;
+            --light-gray: #F7FAFC;
+            --border-gray: #E2E8F0;
+            --bg-gray: #F1F5F9;
+            --white: #FFFFFF;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.1);
+            --shadow-lg: 0 12px 40px rgba(0,0,0,0.12);
+            --shadow-xl: 0 20px 60px rgba(0,0,0,0.15);
+            --radius-sm: 6px;
+            --radius-md: 10px;
+            --radius-lg: 16px;
+            --container: 1280px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        html { scroll-behavior: smooth; font-size: 16px; }
+        body {
+            font-family: 'DM Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--dark-gray); line-height: 1.6;
+            background: var(--bg-gray); -webkit-font-smoothing: antialiased;
+        }
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        img { max-width: 100%; display: block; }
+        .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+        /* ========== HEADER ========== */
+        .header {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(255,255,255,0.95); backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-gray); box-shadow: var(--shadow-sm);
+        }
+        .header-inner {
+            display: flex; align-items: center; justify-content: space-between;
+            height: 72px; padding: 0 48px; max-width: 1440px; margin: 0 auto;
+        }
+        .logo {
+            display: flex; align-items: center; gap: 12px;
+            font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+            font-size: 18px; color: var(--dark-gray); letter-spacing: 0.5px;
+        }
+        .logo-icon {
+            width: 38px; height: 38px; background: var(--brand-green);
+            border-radius: 8px; display: flex; align-items: center;
+            justify-content: center; color: white; font-weight: 800;
+            font-size: 18px; font-family: 'Space Grotesk', sans-serif;
+        }
+        .logo-text span { color: var(--brand-green); }
+        .nav { display: flex; align-items: center; gap: 32px; }
+        .nav a {
+            font-size: 14px; font-weight: 500; color: var(--medium-gray);
+            letter-spacing: 0.3px; position: relative; padding: 4px 0;
+        }
+        .nav a::after {
+            content: ''; position: absolute; bottom: -2px; left: 0;
+            width: 0; height: 2px; background: var(--brand-green); transition: var(--transition);
+        }
+        .nav a:hover, .nav a.active { color: var(--dark-gray); }
+        .nav a:hover::after, .nav a.active::after { width: 100%; }
+        .header-actions { display: flex; align-items: center; gap: 12px; position: relative; }
+        .btn-quote {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 9px 20px; background: var(--brand-green); color: white;
+            border: none; border-radius: var(--radius-sm); font-size: 13px;
+            font-weight: 600; cursor: pointer; transition: var(--transition);
+        }
+        .btn-quote:hover { background: var(--brand-green-dark); transform: translateY(-1px); }
+
+        /* ========== BREADCRUMB ========== */
+        .breadcrumb-bar {
+            padding: 100px 0 0; background: var(--white);
+            border-bottom: 1px solid var(--border-gray);
+        }
+        .breadcrumb {
+            display: flex; align-items: center; gap: 8px;
+            padding: 16px 0; font-size: 14px; color: var(--medium-gray);
+        }
+        .breadcrumb a:hover { color: var(--brand-green); }
+        .breadcrumb .current { color: var(--dark-gray); font-weight: 600; }
+        .breadcrumb svg { width: 14px; height: 14px; color: var(--medium-gray); opacity: 0.5; }
+
+        /* ========== PAGE HERO ========== */
+        .page-hero {
+            background: var(--white); padding: 48px 0 40px;
+        }
+        .page-hero-inner {
+            display: flex; align-items: flex-end; justify-content: space-between;
+        }
+        .page-hero h1 {
+            font-family: 'Space Grotesk', sans-serif; font-size: 36px;
+            font-weight: 700; color: var(--dark-gray); letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+        .page-hero p { font-size: 16px; color: var(--medium-gray); }
+        .result-count { font-size: 14px; color: var(--medium-gray); white-space: nowrap; }
+        .result-count strong { color: var(--dark-gray); }
+
+        /* ========== MAIN LAYOUT ========== */
+        .products-layout {
+            display: grid; grid-template-columns: 280px 1fr;
+            gap: 32px; padding: 32px 0 80px;
+        }
+
+        /* ========== SIDEBAR / FILTER ========== */
+        .filter-sidebar {
+            position: sticky; top: 104px; align-self: start;
+        }
+        .filter-header {
+            display: flex; align-items: center; justify-content: space-between;
+            margin-bottom: 24px;
+        }
+        .filter-header h3 {
+            font-family: 'Space Grotesk', sans-serif; font-size: 18px;
+            font-weight: 700; color: var(--dark-gray);
+        }
+        .filter-reset {
+            font-size: 13px; color: var(--brand-green); font-weight: 500;
+            cursor: pointer; background: none; border: none;
+        }
+        .filter-reset:hover { text-decoration: underline; }
+        .filter-group { margin-bottom: 28px; }
+        .filter-group-title {
+            font-size: 13px; font-weight: 700; color: var(--dark-gray);
+            text-transform: uppercase; letter-spacing: 0.8px;
+            margin-bottom: 14px; display: flex; align-items: center; gap: 8px;
+        }
+        .filter-group-title svg { width: 16px; height: 16px; color: var(--medium-gray); }
+        .filter-options { display: flex; flex-direction: column; gap: 10px; }
+        .filter-option {
+            display: flex; align-items: center; gap: 10px;
+            cursor: pointer; font-size: 14px; color: var(--medium-gray);
+            transition: var(--transition);
+        }
+        .filter-option:hover { color: var(--dark-gray); }
+        .filter-checkbox {
+            width: 18px; height: 18px; border: 2px solid var(--border-gray);
+            border-radius: 4px; display: flex; align-items: center;
+            justify-content: center; transition: var(--transition);
+            flex-shrink: 0;
+        }
+        .filter-option.active .filter-checkbox {
+            background: var(--brand-green); border-color: var(--brand-green);
+        }
+        .filter-option.active .filter-checkbox::after {
+            content: ''; width: 5px; height: 9px;
+            border: solid white; border-width: 0 2px 2px 0;
+            transform: rotate(45deg); margin-top: -2px;
+        }
+        .filter-count {
+            margin-left: auto; font-size: 12px; color: var(--medium-gray);
+            background: var(--bg-gray); padding: 2px 8px; border-radius: 10px;
+        }
+        .color-swatches { display: flex; flex-wrap: wrap; gap: 10px; }
+        .color-swatch {
+            width: 32px; height: 32px; border-radius: 50%; cursor: pointer;
+            border: 3px solid transparent; transition: var(--transition);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .color-swatch:hover, .color-swatch.active {
+            border-color: var(--brand-green); transform: scale(1.15);
+        }
+        .color-swatch-label {
+            font-size: 11px; text-align: center; margin-top: 4px; color: var(--medium-gray);
+        }
+        .filter-apply {
+            width: 100%; padding: 12px; background: var(--brand-green);
+            color: white; border: none; border-radius: var(--radius-sm);
+            font-size: 14px; font-weight: 600; cursor: pointer;
+            transition: var(--transition); margin-top: 8px;
+        }
+        .filter-apply:hover { background: var(--brand-green-dark); }
+
+        /* ========== TOOLBAR ========== */
+        .toolbar {
+            display: flex; align-items: center; justify-content: space-between;
+            margin-bottom: 24px; padding: 16px 20px;
+            background: var(--white); border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+        .active-filters { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .active-filter-tag {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 6px 12px; background: var(--brand-green-light);
+            color: var(--brand-green); font-size: 13px; font-weight: 500;
+            border-radius: 50px; cursor: pointer; transition: var(--transition);
+        }
+        .active-filter-tag:hover { background: var(--brand-green); color: white; }
+        .active-filter-tag svg { width: 12px; height: 12px; }
+        .toolbar-right { display: flex; align-items: center; gap: 16px; }
+        .sort-select {
+            padding: 8px 14px; border: 1px solid var(--border-gray);
+            border-radius: var(--radius-sm); font-size: 13px;
+            font-family: 'Inter', sans-serif; color: var(--medium-gray);
+            background: white; cursor: pointer; outline: none;
+        }
+        .sort-select:focus { border-color: var(--brand-green); }
+        .view-toggle { display: flex; gap: 4px; }
+        .view-btn {
+            width: 36px; height: 36px; border: 1px solid var(--border-gray);
+            background: white; border-radius: var(--radius-sm);
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; transition: var(--transition);
+        }
+        .view-btn.active { background: var(--brand-green); border-color: var(--brand-green); }
+        .view-btn.active svg { color: white; }
+        .view-btn svg { width: 16px; height: 16px; color: var(--medium-gray); }
+
+        /* ========== PRODUCT GRID ========== */
+        .product-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+        }
+        .product-grid.list-view { grid-template-columns: 1fr; }
+        .product-grid.list-view .product-card { display: grid; grid-template-columns: 280px 1fr; }
+        .product-grid.list-view .product-img { height: 240px; }
+
+        .product-card {
+            background: var(--white); border-radius: var(--radius-lg);
+            overflow: hidden; border: 1px solid var(--border-gray);
+            transition: var(--transition); cursor: pointer;
+        }
+        .product-card:hover {
+            transform: translateY(-4px); box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+        .product-img {
+            position: relative; height: 260px; overflow: hidden;
+            background: var(--bg-gray);
+        }
+        .product-img img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .product-card:hover .product-img img { transform: scale(1.06); }
+        .product-badge {
+            position: absolute; top: 14px; left: 14px;
+            padding: 5px 12px; border-radius: 50px; font-size: 11px;
+            font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase;
+        }
+        .badge-hot { background: #EF4444; color: white; }
+        .badge-new { background: var(--brand-green); color: white; }
+        .badge-eco { background: #06B6D4; color: white; }
+        .product-wishlist {
+            position: absolute; top: 14px; right: 14px;
+            width: 36px; height: 36px; background: white;
+            border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; box-shadow: var(--shadow-sm);
+            cursor: pointer; transition: var(--transition);
+        }
+        .product-wishlist:hover { background: var(--brand-green); }
+        .product-wishlist svg { width: 15px; height: 15px; color: var(--medium-gray); }
+        .product-wishlist:hover svg { color: white; }
+        .product-info { padding: 20px; }
+        .product-series {
+            font-size: 11px; font-weight: 600; color: var(--brand-green);
+            letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px;
+        }
+        .product-name {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 17px; font-weight: 700; color: var(--dark-gray);
+            margin-bottom: 10px; line-height: 1.3;
+        }
+        .product-desc {
+            font-size: 13px; color: var(--medium-gray); line-height: 1.6;
+            margin-bottom: 14px; display: -webkit-box; -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical; overflow: hidden;
+        }
+        .product-specs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+        .spec-tag {
+            padding: 3px 9px; background: var(--bg-gray); font-size: 11px;
+            color: var(--medium-gray); border-radius: 4px; font-weight: 500;
+        }
+        .product-colors { display: flex; gap: 5px; margin-bottom: 14px; }
+        .color-dot {
+            width: 20px; height: 20px; border-radius: 50%;
+            border: 2px solid white; box-shadow: 0 0 0 1px var(--border-gray);
+            cursor: pointer; transition: var(--transition);
+        }
+        .color-dot:hover { box-shadow: 0 0 0 2px var(--brand-green); transform: scale(1.1); }
+        .product-bottom {
+            display: flex; align-items: center; justify-content: space-between;
+            padding-top: 14px; border-top: 1px solid var(--border-gray);
+        }
+        .product-apps {
+            display: flex; gap: 6px;
+        }
+        .app-tag {
+            padding: 3px 8px; background: var(--brand-green-light);
+            font-size: 11px; color: var(--brand-green); border-radius: 4px; font-weight: 500;
+        }
+        .product-link {
+            display: inline-flex; align-items: center; gap: 5px;
+            font-size: 13px; font-weight: 600; color: var(--brand-green);
+        }
+        .product-link svg { width: 14px; height: 14px; transition: transform 0.3s; }
+        .product-link:hover svg { transform: translateX(3px); }
+
+        /* ========== PAGINATION ========== */
+        .pagination {
+            display: flex; align-items: center; justify-content: center;
+            gap: 8px; margin-top: 40px;
+        }
+        .page-btn {
+            width: 40px; height: 40px; border: 1px solid var(--border-gray);
+            background: white; border-radius: var(--radius-sm);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 14px; font-weight: 500; color: var(--medium-gray);
+            cursor: pointer; transition: var(--transition);
+        }
+        .page-btn:hover { border-color: var(--brand-green); color: var(--brand-green); }
+        .page-btn.active {
+            background: var(--brand-green); border-color: var(--brand-green); color: white;
+        }
+        .page-btn svg { width: 16px; height: 16px; }
+        .page-btn:disabled { opacity: 0.4; cursor: default; }
+        .page-info { font-size: 13px; color: var(--medium-gray); margin: 0 8px; }
+
+        /* ========== SCROLL ANIMATIONS ========== */
+        .reveal {
+            opacity: 0; transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* ========== SERIES TABS ========== */
+        .series-tabs {
+            display: flex; gap: 8px; flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+        .series-tab {
+            padding: 8px 20px; border: 1px solid var(--border-gray);
+            border-radius: 50px; background: var(--white);
+            color: var(--medium-gray); font-size: 13px; font-weight: 500;
+            cursor: pointer; transition: var(--transition);
+            font-family: 'Inter', sans-serif;
+        }
+        .series-tab:hover { border-color: var(--brand-green); color: var(--brand-green); }
+        .series-tab.active { background: var(--brand-green); color: white; border-color: var(--brand-green); }
+
+        /* ========== ECO FEATURED ========== */
+        .eco-featured .eco-grid a:hover { transform: translateY(-4px); }
+
+        /* ========== MOBILE FILTER TOGGLE ========== */
+        .mobile-filter-toggle {
+            display: none; width: 100%; padding: 12px;
+            background: var(--white); border: 1px solid var(--border-gray);
+            border-radius: var(--radius-sm); font-size: 14px;
+            font-weight: 600; color: var(--dark-gray); cursor: pointer;
+            margin-bottom: 16px; gap: 8px; align-items: center;
+            justify-content: center;
+        }
+        .mobile-filter-toggle svg { width: 16px; height: 16px; }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .product-grid { grid-template-columns: repeat(2, 1fr); }
+            .products-layout { grid-template-columns: 240px 1fr; }
+        }
+        @media (max-width: 768px) {
+            .header-inner { padding: 0 20px; height: 64px; }
+            .nav { display: none; }
+            .breadcrumb-bar { padding-top: 80px; }
+            .page-hero h1 { font-size: 28px; }
+            .mobile-filter-toggle { display: flex; }
+            .filter-sidebar { display: none; }
+            .filter-sidebar.mobile-open { display: block; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 2000; background: white; overflow-y: auto; padding: 24px; }
+            .product-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+            .product-img { height: 180px; }
+            .toolbar { flex-direction: column; gap: 12px; align-items: flex-start; }
+            .product-grid.list-view { grid-template-columns: 1fr; }
+            .product-grid.list-view .product-card { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 480px) {
+            .product-grid { grid-template-columns: 1fr; }
+            .product-img { height: 220px; }
+        }
+
+        /* ========== LANGUAGE SWITCH ========== */
+        .lang-switch {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 7px 14px; border: 1px solid var(--border-gray);
+            border-radius: var(--radius-sm); font-size: 13px; font-weight: 500;
+            color: var(--dark-gray); cursor: pointer; background: white;
+            transition: var(--transition); position: relative;
+        }
+        .lang-switch:hover { border-color: var(--brand-green); color: var(--brand-green); }
+        .lang-dropdown {
+            display: none; position: absolute; top: calc(100% + 4px); right: 0;
+            background: white; border-radius: var(--radius-sm);
+            box-shadow: var(--shadow-lg); border: 1px solid var(--border-gray);
+            overflow: hidden; z-index: 100; min-width: 140px;
+        }
+        .lang-dropdown.show { display: block; }
+        .lang-option {
+            display: flex; align-items: center; gap: 10px;
+            padding: 10px 16px; font-size: 13px; cursor: pointer;
+            color: var(--medium-gray); transition: var(--transition);
+        }
+        .lang-option:hover, .lang-option.active { background: var(--brand-green-light); color: var(--brand-green); }
+        .lang-option span { font-weight: 600; min-width: 24px; }
+
+        /* ========== SECTION HEADER ========== */
+        .section-header {
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto 48px;
+        }
+        .section-label {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--brand-green);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--dark-gray);
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+        .section-desc {
+            font-size: 16px;
+            color: var(--medium-gray);
+            line-height: 1.7;
+        }
+
+        /* ========== SCENES GALLERY ========== */
+        .scenes-section { background: var(--light-gray); padding: 80px 0; }
+        .scene-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .scene-item {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            aspect-ratio: 4/3;
+        }
+        .scene-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .scene-item:hover img { transform: scale(1.08); }
+        @media (max-width: 768px) { .scene-grid { grid-template-columns: repeat(2, 1fr); } }
+
+        /* ========== PRODUCT TOOLBAR ========== */
+        .product-toolbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 32px;
+            padding: 16px 20px;
+            background: var(--white);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-gray);
+        }
+        .product-count { font-size: 14px; color: var(--medium-gray); }
+        .filter-bar { display: flex; gap: 8px; flex-wrap: wrap; }
+        .filter-btn {
+            padding: 8px 18px;
+            border: 1px solid var(--border-gray);
+            border-radius: 50px;
+            background: var(--white);
+            color: var(--medium-gray);
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .filter-btn:hover { border-color: var(--brand-green); color: var(--brand-green); }
+        .filter-btn.active { background: var(--brand-green); color: white; border-color: var(--brand-green); }
+    </style>
+    <!-- SEO: Open Graph -->
+    <meta property="og:title" content="Outdoor Tiles &amp; Eco Bricks - XINFENG XIN'AN">
+    <meta property="og:description" content="Browse 127+ porcelain pavers and 23 eco brick products. Filter by size, thickness, color, application. R11-R13 slip resistance.">
+    <meta property="og:type" content="website">
+    <!-- SEO: JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Outdoor Tiles & Eco Bricks Collection",
+        "description": "Premium eco porcelain pavers and eco bricks for patios, driveways, pools, and commercial applications.",
+        "url": "https://xinfengxinan.com/products.html",
+        "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": []
+        }
+    }
+    </script>
+</head>
+<body>
+
+
+<!-- HEADER -->
+<header class="header">
+    <div class="header-inner">
+        <a href="index.html" class="logo">
+            <img src="images/logo/logo.png" alt="Xinfeng Xinan" style="height:42px; width:auto;">
+        </a>
+        <nav class="nav">
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="products.html" class="active" data-i18n="nav_products">Outdoor Tiles</a>
+            <a href="index.html#technology" data-i18n="nav_technology">Technology</a>
+            <a href="index.html#usp" data-i18n="nav_about">About</a>
+            <a href="index.html#products" data-i18n="nav_resources">Resources</a>
+            <a href="contact.html" data-i18n="nav_contact">Contact</a>
+        </nav>
+        <div class="header-actions">
+            <button class="lang-switch" id="langSwitch" onclick="document.getElementById('langDropdown').classList.toggle('show')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                <span id="currentLang">EN</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-option active" data-lang="en" onclick="doSwitch('en')"><span>EN</span> English</div>
+                <div class="lang-option" data-lang="zh" onclick="doSwitch('zh')"><span>CN</span> 中文</div>
+                <div class="lang-option" data-lang="ru" onclick="doSwitch('ru')"><span>RU</span> Русский</div>
+            </div>
+            <button class="btn-quote">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                <span data-i18n="btn_quote">Get Quote</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb-bar">
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="index.html" data-i18n="breadcrumb_home">Home</a>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            <span class="current" data-i18n="breadcrumb_products">Products</span>
+        </div>
+    </div>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+    <div class="container">
+        <div class="page-hero-inner">
+            <div>
+                <h1 data-i18n="page_title">Our Products</h1>
+                <p data-i18n="page_subtitle">Premium paving solutions for every outdoor project</p>
+            </div>
+            <div class="result-count"><span data-i18n="result_showing">Showing</span> <strong id="heroProductCount">127</strong> <span data-i18n="result_products">products</span></div>
+        </div>
+        <!-- Category Tabs -->
+        <div class="cat-switch" style="display:flex;gap:0;margin-top:24px;background:var(--bg-gray);border-radius:10px;padding:4px;border:1px solid var(--border-gray)">
+            <button class="cat-btn active" data-cat="porcelain" onclick="switchCategory('porcelain')" style="flex:1;padding:14px 24px;border:none;background:transparent;border-radius:8px;cursor:pointer;transition:0.3s;font-family:'DM Sans',sans-serif;text-align:center">
+                <div style="font-size:16px;font-weight:700;color:var(--medium-gray)">地铺石</div>
+                <div style="font-size:11px;color:var(--medium-gray);margin-top:2px;opacity:0.7">Porcelain Pavers · 10 series</div>
+            </button>
+            <button class="cat-btn" data-cat="eco-brick" onclick="switchCategory('eco-brick')" style="flex:1;padding:14px 24px;border:none;background:transparent;border-radius:8px;cursor:pointer;transition:0.3s;font-family:'DM Sans',sans-serif;text-align:center">
+                <div style="font-size:16px;font-weight:700;color:var(--medium-gray)">生态砖</div>
+                <div style="font-size:11px;color:var(--medium-gray);margin-top:2px;opacity:0.7">Eco Brick Series · 23 products</div>
+            </button>
+        </div>
+        <style>
+            .cat-btn { cursor:pointer; }
+            .cat-btn.active { background:white; box-shadow:0 1px 4px rgba(0,0,0,0.1); }
+            .cat-btn.active div { color:var(--dark-gray) !important; }
+            .cat-btn.active div:last-child { color:var(--brand-green) !important; opacity:1 !important; }
+            .cat-btn:hover:not(.active) { background:rgba(0,0,0,0.03); }
+        </style>
+    </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+    <div class="products-layout">
+
+        <!-- FILTER SIDEBAR -->
+        <aside class="filter-sidebar" id="filterSidebar">
+            <div class="filter-header">
+                <h3 data-i18n="filter_title">Filters</h3>
+                <button class="filter-reset" onclick="resetFilters()" data-i18n="filter_reset">Reset All</button>
+            </div>
+
+            <!-- Surface / Series -->
+            <div class="filter-group">
+                <div class="filter-group-title">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                    <span data-i18n="filter_surface">Surface / Series</span>
+                </div>
+                <div class="filter-options" id="seriesFilters">
+                    <!-- Porcelain Pavers Series -->
+                    <div class="filter-section-porcelain">
+                        <div class="filter-option active" data-filter-type="series" data-filter-value="stone-look">
+                            <div class="filter-checkbox"></div>
+                            <span data-i18n="series_stone">Stone Look</span>
+                        </div>
+                        <div class="filter-option" data-filter-type="series" data-filter-value="cement-gray">
+                            <div class="filter-checkbox"></div>
+                            <span data-i18n="series_concrete">Concrete Look</span>
+                        </div>
+                        <div class="filter-option" data-filter-type="series" data-filter-value="terrazzo">
+                            <div class="filter-checkbox"></div>
+                            <span data-i18n="series_terrazzo">Terrazzo</span>
+                        </div>
+                        <div class="filter-option" data-filter-type="series" data-filter-value="pattern">
+                            <div class="filter-checkbox"></div>
+                            <span data-i18n="series_pattern">Pattern</span>
+                        </div>
+                        <div class="filter-option" data-filter-type="series" data-filter-value="wood-look">
+                            <div class="filter-checkbox"></div>
+                            <span data-i18n="series_wood">Wood Look</span>
+                        </div>
+                        <div class="filter-option" data-filter-type="series" data-filter-value="fabric">
+                            <div class="filter-checkbox"></div>
+                            <span data-i18n="series_fabric">Fabric Look</span>
+                        </div>
+                        <div class="filter-option" data-filter-type="series" data-filter-value="sandstone">
+                            <div class="filter-checkbox"></div>
+                            <span data-i18n="series_sandstone">Sandstone</span>
+                        </div>
+                        <div class="filter-option" data-filter-type="series" data-filter-value="marble">
+                            <div class="filter-checkbox"></div>
+                            <span data-i18n="series_marble">Marble</span>
+                        </div>
+                        <div class="filter-option" data-filter-type="series" data-filter-value="solid-colors">
+                            <div class="filter-checkbox"></div>
+                            <span data-i18n="series_solid">Solid Colors</span>
+                        </div>
+                        <div class="filter-option" data-filter-type="series" data-filter-value="lime-stone">
+                            <div class="filter-checkbox"></div>
+                            <span data-i18n="series_limestone">Limestone</span>
+                        </div>
+                    </div>
+                    <!-- Eco Brick Series -->
+                    <div class="filter-section-ecobrick" style="display:none">
+                        <div class="filter-option active" data-filter-type="series" data-filter-value="eco-brick">
+                            <div class="filter-checkbox"></div>
+                            <span data-i18n="series_eco">Eco Brick Series</span>
+                        </div>
+                        <div style="padding:8px 4px;font-size:12px;color:var(--medium-gray);line-height:1.6">
+                            <strong style="color:var(--brand-green)">23 products</strong><br>
+                            Sub-categories: PC仿石砖 · 护坡砖 · 挡土墙 · 铺地砖 · 透水砖 · 盲道砖 · 路沿石
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Size -->
+            <div class="filter-group">
+                <div class="filter-group-title">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 3H3v18h18V3zM9 3v18M15 3v18M3 9h18M3 15h18"/></svg>
+                    <span data-i18n="filter_size">Size</span>
+                </div>
+                <div class="filter-options">
+                    <div class="filter-option active" data-filter-type="size" data-filter-value="600x600mm">
+                        <div class="filter-checkbox"></div>
+                        <span>600 x 600 mm</span>
+                        <span class="filter-count">12</span>
+                    </div>
+                    <div class="filter-option" data-filter-type="size" data-filter-value="600x900mm">
+                        <div class="filter-checkbox"></div>
+                        <span>600 x 900 mm</span>
+                        <span class="filter-count">8</span>
+                    </div>
+                    <div class="filter-option" data-filter-type="size" data-filter-value="600x1200mm">
+                        <div class="filter-checkbox"></div>
+                        <span>600 x 1200 mm</span>
+                        <span class="filter-count">6</span>
+                    </div>
+                    <div class="filter-option" data-filter-type="size" data-filter-value="300x300mm">
+                        <div class="filter-checkbox"></div>
+                        <span>300 x 300 mm</span>
+                        <span class="filter-count">4</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thickness -->
+            <div class="filter-group">
+                <div class="filter-group-title">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20M2 12l4-4M2 12l4 4M22 12l-4-4M22 12l-4 4"/></svg>
+                    <span data-i18n="filter_thickness">Thickness</span>
+                </div>
+                <div class="filter-options">
+                    <div class="filter-option active" data-filter-type="thickness" data-filter-value="20mm">
+                        <div class="filter-checkbox"></div>
+                        <span>20 mm</span>
+                        <span class="filter-count">18</span>
+                    </div>
+                    <div class="filter-option" data-filter-type="thickness" data-filter-value="18mm">
+                        <div class="filter-checkbox"></div>
+                        <span>18 mm</span>
+                        <span class="filter-count">6</span>
+                    </div>
+                    <div class="filter-option" data-filter-type="thickness" data-filter-value="12mm">
+                        <div class="filter-checkbox"></div>
+                        <span>10 mm</span>
+                        <span class="filter-count">6</span>
+                    </div>
+                    <div class="filter-option" data-filter-type="thickness" data-filter-value="30mm">
+                        <div class="filter-checkbox"></div>
+                        <span>30 mm</span>
+                        <span class="filter-count">4</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Color -->
+            <div class="filter-group">
+                <div class="filter-group-title">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="10.5" r="2.5"/><circle cx="8.5" cy="7.5" r="2.5"/><circle cx="6.5" cy="12.5" r="2.5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+                    <span data-i18n="filter_color">Color</span>
+                </div>
+                <div class="color-swatches">
+                    <div>
+                        <div class="color-swatch active" style="background:#C4A882;" onclick="toggleSwatch(this)" title="Beige"></div>
+                        <div class="color-swatch-label">Beige</div>
+                    </div>
+                    <div>
+                        <div class="color-swatch" style="background:#8B7355;" onclick="toggleSwatch(this)" title="Brown"></div>
+                        <div class="color-swatch-label">Brown</div>
+                    </div>
+                    <div>
+                        <div class="color-swatch" style="background:#D4C5A9;" onclick="toggleSwatch(this)" title="Ivory"></div>
+                        <div class="color-swatch-label">Ivory</div>
+                    </div>
+                    <div>
+                        <div class="color-swatch" style="background:#6B5B45;" onclick="toggleSwatch(this)" title="Dark"></div>
+                        <div class="color-swatch-label">Dark</div>
+                    </div>
+                    <div>
+                        <div class="color-swatch" style="background:#808080;" onclick="toggleSwatch(this)" title="Grey"></div>
+                        <div class="color-swatch-label">Grey</div>
+                    </div>
+                    <div>
+                        <div class="color-swatch" style="background:#E8E0D4;" onclick="toggleSwatch(this)" title="White"></div>
+                        <div class="color-swatch-label">White</div>
+                    </div>
+                    <div>
+                        <div class="color-swatch" style="background:#2D2D2D;" onclick="toggleSwatch(this)" title="Black"></div>
+                        <div class="color-swatch-label">Black</div>
+                    </div>
+                    <div>
+                        <div class="color-swatch" style="background:#B8956A;" onclick="toggleSwatch(this)" title="Oak"></div>
+                        <div class="color-swatch-label">Oak</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Application -->
+            <div class="filter-group">
+                <div class="filter-group-title">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    <span data-i18n="filter_application">Application</span>
+                </div>
+                <div class="filter-options">
+                    <div class="filter-option active" data-filter-type="application" data-filter-value="Patio">
+                        <div class="filter-checkbox"></div>
+                        <span>Patio / Garden</span>
+                        <span class="filter-count">20</span>
+                    </div>
+                    <div class="filter-option" data-filter-type="application" data-filter-value="Pool">
+                        <div class="filter-checkbox"></div>
+                        <span>Pool Surround</span>
+                        <span class="filter-count">14</span>
+                    </div>
+                    <div class="filter-option" data-filter-type="application" data-filter-value="Driveway">
+                        <div class="filter-checkbox"></div>
+                        <span>Driveway</span>
+                        <span class="filter-count">10</span>
+                    </div>
+                    <div class="filter-option" data-filter-type="application" data-filter-value="Walkway">
+                        <div class="filter-checkbox"></div>
+                        <span>Walkway</span>
+                        <span class="filter-count">16</span>
+                    </div>
+                    <div class="filter-option" data-filter-type="application" data-filter-value="Commercial">
+                        <div class="filter-checkbox"></div>
+                        <span>Commercial</span>
+                        <span class="filter-count">12</span>
+                    </div>
+                    <div class="filter-option" data-filter-type="application" data-filter-value="Wall">
+                        <div class="filter-checkbox"></div>
+                        <span>Wall / Facade</span>
+                        <span class="filter-count">8</span>
+                    </div>
+                    <div class="filter-option" data-filter-type="application" data-filter-value="Permeable">
+                        <div class="filter-checkbox"></div>
+                        <span>Permeable</span>
+                        <span class="filter-count">4</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="filter-apply" onclick="applyFilters()" data-i18n="filter_apply">
+                Apply Filters
+            </button>
+        </aside>
+
+        <!-- PRODUCT LIST -->
+        <div class="product-list">
+            <!-- Mobile filter toggle -->
+            <button class="mobile-filter-toggle" onclick="document.getElementById('filterSidebar').classList.toggle('mobile-open')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/></svg>
+                <span data-i18n="mobile_filter">Show Filters</span>
+            </button>
+
+            <!-- Toolbar -->
+            <div class="toolbar">
+                <div class="active-filters" id="activeFilterTags">
+                    <span data-i18n="filter_active">Active Filters: </span>
+                </div>
+                <div class="toolbar-right">
+                    <select class="sort-select" data-i18n-select>
+                        <option value="featured" data-i18n="sort_featured">Sort by: Featured</option>
+                        <option value="price-low" data-i18n="sort_low">Price: Low to High</option>
+                        <option value="price-high" data-i18n="sort_high">Price: High to Low</option>
+                        <option value="newest" data-i18n="sort_new">Newest First</option>
+                        <option value="popular" data-i18n="sort_popular">Most Popular</option>
+                    </select>
+                    <div class="view-toggle">
+                        <button class="view-btn active" onclick="setView('grid', this)" title="Grid view">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                        </button>
+                        <button class="view-btn" onclick="setView('list', this)" title="List view">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Toolbar -->
+            <div class="product-toolbar">
+                <div class="product-count">
+                    <span data-i18n="products_count">Showing</span> <span id="productCount">127</span> <span data-i18n="products_total">products</span>
+                </div>
+                <div class="filter-bar" id="filterBar">
+                    <button class="filter-btn active" data-series="all" data-i18n="filter_all">All Series</button>
+                </div>
+            </div>
+
+            <!-- ========== SERIES TABS ========== -->
+            <div class="series-tabs" id="seriesTabs" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px"></div>
+
+            <!-- ========== PRODUCT GRID ========== -->
+            <div class="product-grid" id="productGrid"></div>
+        </div>
+    </div>
+</div>
+
+<!-- SCENES GALLERY -->
+<section class="section scenes-section">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-label" data-i18n="scene_label">Applications</div>
+            <h2 class="section-title" data-i18n="scene_title">See Our Products in Action</h2>
+            <p class="section-desc" data-i18n="scene_desc">Real applications showcasing the versatility of our porcelain pavers.</p>
+        </div>
+        <div class="scene-grid" id="sceneGrid"></div>
+    </div>
+</section>
+
+<script src="js/products-data.js?v=2"></script>
+<script src="js/products-renderer.js?v=2"></script>
+
+<!-- SCRIPTS -->
+    <script src="js/i18n.js?v=2"></script>
+    <script>
+    var pageTranslations = {
+        en: {
+            nav_home: "Home", nav_products: "Outdoor Tiles", nav_technology: "Technology", nav_about: "About", nav_resources: "Resources", nav_contact: "Contact",
+            btn_quote: "Get Quote",
+            breadcrumb_home: "Home", breadcrumb_products: "Outdoor Tiles",
+            page_title: "Outdoor Tiles", page_subtitle: "Premium paving solutions for every outdoor project",
+            result_showing: "Showing", result_products: "products",
+            filter_title: "Filters", filter_reset: "Reset All", filter_surface: "Surface / Series", filter_size: "Size", filter_thickness: "Thickness", filter_color: "Color", filter_application: "Application", filter_apply: "Apply Filters",
+            series_stone: "Stone Look", series_wood: "Wood Look", series_terrazzo: "Terrazzo", series_concrete: "Concrete Look", series_pattern: "Pattern", series_marble: "Marble", series_sandstone: "Sandstone", series_fabric: "Fabric Look", series_solid: "Solid Colors", series_limestone: "Limestone", series_eco: "Eco Brick Series",
+            filter_active: "Active Filters:", filter_all: "All Series",
+            mobile_filter: "Show Filters", sort_featured: "Sort by: Featured", sort_low: "Price: Low to High", sort_high: "Price: High to Low", sort_new: "Newest First", sort_popular: "Most Popular",
+            badge_bestseller: "Best Seller", badge_new: "New", badge_eco: "Eco", badge_trending: "Trending", product_view: "View",
+            p1_name: "Travertino Natural", p1_series: "Stone Look", p1_desc: "Classic travertine-inspired porcelain paver with natural veining patterns. Ideal for patios, pool surrounds, and walkways.",
+            p2_name: "French Oak Premium", p2_series: "Wood Look", p2_desc: "Realistic wood-grain texture in durable 20mm porcelain. Brings warmth to any outdoor space.",
+            p3_name: "Venetian Terrazzo", p3_series: "Terrazzo", p3_desc: "Contemporary terrazzo design with recycled glass chips. A perfect blend of style and sustainability.",
+            p4_name: "Urban Concrete Grey", p4_series: "Concrete Look", p4_desc: "Industrial-style concrete texture with subtle variations. Popular for modern minimalist designs.",
+            p5_name: "Carrara Marble", p5_series: "Marble", p5_desc: "Elegant marble-look paver with white base and grey veining. Luxurious appearance for premium projects.",
+            p6_name: "Morandi Sand", p6_series: "Solid Colors", p6_desc: "Soft, muted solid color in the popular Morandi palette. Perfect for creating calm, sophisticated outdoor spaces.",
+            app_patio: "Patio", app_pool: "Pool", app_walkway: "Walkway", app_balcony: "Balcony", app_commercial: "Commercial", app_driveway: "Driveway", app_wall: "Wall",
+            products_count: "Showing", products_total: "products",
+            scene_label: "Applications", scene_title: "See Our Products in Action", scene_desc: "Real applications showcasing the versatility of our porcelain pavers.",
+            eco_featured_badge: "NEW COLLECTION", eco_featured_title: "Eco Brick Series", eco_featured_cta: "View All 23 Products \u203A",
+            meta_description: "Browse our complete range of eco porcelain pavers. Filter by size, thickness, surface, color and application. 11 collections including new Eco Brick series.",
+            page_title_full: "Outdoor Tiles - XINFENG XIN'AN | Premium Eco Porcelain Pavers"
+        },
+        zh: {
+            nav_home: "首页", nav_products: "户外砖", nav_technology: "技术工艺", nav_about: "关于我们", nav_resources: "资源中心", nav_contact: "联系我们",
+            btn_quote: "获取报价",
+            breadcrumb_home: "首页", breadcrumb_products: "户外砖",
+            page_title: "户外砖系列", page_subtitle: "为每个户外项目提供高端铺装方案",
+            result_showing: "共", result_products: "款产品",
+            filter_title: "筛选", filter_reset: "重置全部", filter_surface: "表面 / 系列", filter_size: "尺寸", filter_thickness: "厚度", filter_color: "颜色", filter_application: "应用场景", filter_apply: "应用筛选",
+            series_stone: "石材面", series_wood: "木纹面", series_terrazzo: "水磨石", series_concrete: "水泥面", series_pattern: "几何纹", series_marble: "大理石纹", series_sandstone: "砂岩面", series_fabric: "布纹面", series_solid: "纯色系列", series_limestone: "石灰岩面", series_eco: "生态砖系列",
+            filter_active: "当前筛选:", filter_all: "全部分类",
+            mobile_filter: "显示筛选", sort_featured: "排序：推荐", sort_low: "价格：低到高", sort_high: "价格：高到低", sort_new: "最新上架", sort_popular: "最受欢迎",
+            badge_bestseller: "热销", badge_new: "新品", badge_eco: "环保", badge_trending: "流行", product_view: "查看",
+            p1_name: "洞石天然系列", p1_series: "石材面", p1_desc: "经典洞石纹理的瓷质铺石，天然纹理自然美观。适用于庭院、泳池周边和步道。",
+            p2_name: "法式橡木系列", p2_series: "木纹面", p2_desc: "逼真木纹肌理的20mm厚瓷质铺石，为户外空间带来温暖质感。",
+            p3_name: "威尼斯水磨石", p3_series: "水磨石", p3_desc: "采用回收玻璃碎粒的当代水磨石设计，完美融合时尚与环保理念。",
+            p4_name: "都市混凝土灰", p4_series: "水泥面", p4_desc: "工业风格水泥质感，细微变化丰富。极简现代设计的热门选择。",
+            p5_name: "卡拉拉大理石", p5_series: "大理石纹", p5_desc: "白色基底搭配灰色纹理的大理石纹铺石，彰显高端奢华品质。",
+            p6_name: "莫兰迪砂岩", p6_series: "纯色系列", p6_desc: "柔和低饱和度的莫兰迪色系，营造宁静雅致的户外空间氛围。",
+            app_patio: "庭院", app_pool: "泳池", app_walkway: "步道", app_balcony: "阳台", app_commercial: "商业", app_driveway: "车道", app_wall: "墙面",
+            products_count: "共", products_total: "款产品",
+            scene_label: "应用场景", scene_title: "产品实景展示", scene_desc: "真实应用场景展现生态瓷质铺砖的多功能性。",
+            eco_featured_badge: "新品系列", eco_featured_title: "生态砖系列", eco_featured_cta: "查看全部18款产品 \u203A",
+            meta_description: "浏览我们的全系列生态瓷质铺砖。按尺寸、厚度、表面、颜色和应用场景筛选。11大系列可选，含新品生态砖系列。",
+            page_title_full: "户外砖系列 - XINFENG XIN'AN | 高端生态瓷质铺砖"
+        },
+        ru: {
+            nav_home: "Главная", nav_products: "Уличная плитка", nav_technology: "Технологии", nav_about: "О нас", nav_resources: "Ресурсы", nav_contact: "Контакты",
+            btn_quote: "Запросить цену",
+            breadcrumb_home: "Главная", breadcrumb_products: "Уличная плитка",
+            page_title: "Уличная плитка", page_subtitle: "Премиальные решения для каждого наружного проекта",
+            result_showing: "Показано", result_products: "товаров",
+            filter_title: "Фильтры", filter_reset: "Сбросить все", filter_surface: "Поверхность / Серия", filter_size: "Размер", filter_thickness: "Толщина", filter_color: "Цвет", filter_application: "Применение", filter_apply: "Применить фильтры",
+            series_stone: "Камень", series_wood: "Древесина", series_terrazzo: "Терраццо", series_concrete: "Бетон", series_pattern: "Узор", series_marble: "Мрамор", series_sandstone: "Песчаник", series_fabric: "Ткань", series_solid: "Однотонные", series_limestone: "Известняк", series_eco: "Серия Эко-плитка",
+            filter_active: "Активные фильтры:", filter_all: "Все серии",
+            mobile_filter: "Показать фильтры", sort_featured: "Сортировка: Рекомендуемые", sort_low: "Цена: по возрастанию", sort_high: "Цена: по убыванию", sort_new: "Новинки", sort_popular: "Популярные",
+            badge_bestseller: "Бестселлер", badge_new: "Новинка", badge_eco: "Эко", badge_trending: "В тренде", product_view: "Просмотр",
+            p1_name: "Травертино Натуральный", p1_series: "Камень", p1_desc: "Классическая керамическая плита с текстурой травертина. Идеально для патио, бассейнов и дорожек.",
+            p2_name: "Французский дуб Премиум", p2_series: "Древесина", p2_desc: "Реалистичная текстура дерева в прочной 20мм керамике. Привносит тепло в любое пространство.",
+            p3_name: "Венецианский терраццо", p3_series: "Терраццо", p3_desc: "Современный дизайн терраццо с переработанной стеклянной крошкой. Стиль и экологичность.",
+            p4_name: "Городской бетон серый", p4_series: "Бетон", p4_desc: "Индустриальная текстура бетона с тонкими вариациями. Популярен для современного минимализма.",
+            p5_name: "Каррарский мрамор", p5_series: "Мрамор", p5_desc: "Элегантная мраморная плита с белой основой и серыми прожилками. Для премиальных проектов.",
+            p6_name: "Моранди песочный", p6_series: "Однотонные", p6_desc: "Мягкий приглушенный однотонный цвет в популярной палитре Моранди. Для спокойных утонченных пространств.",
+            app_patio: "Патио", app_pool: "Бассейн", app_walkway: "Дорожка", app_balcony: "Балкон", app_commercial: "Коммерция", app_driveway: "Подъезд", app_wall: "Стена",
+            products_count: "Показано", products_total: "товаров",
+            scene_label: "Применение", scene_title: "Наши продукты в действии", scene_desc: "Реальные примеры применения наших керамических плит.",
+            eco_featured_badge: "НОВАЯ КОЛЛЕКЦИЯ", eco_featured_title: "Серия Эко-плитка", eco_featured_cta: "Все 18 продуктов \u203A",
+            meta_description: "Просмотрите наш ассортимент экологичных керамических плит. Фильтр по размеру, толщине, поверхности, цвету и применению. 11 коллекций включая новую серию Эко-плитка.",
+            page_title_full: "Уличная плитка - XINFENG XIN'AN | Премиальные экологичные керамические плиты"
+        }
+    };
+
+    I18N.init(pageTranslations);
+    
+    // Direct language switch
+    function doSwitch(lang) {
+        var dict = pageTranslations[lang];
+        if (!dict) return;
+        localStorage.setItem('preferred-lang', lang);
+        document.querySelectorAll('[data-i18n]').forEach(function(el) {
+            var k = el.getAttribute('data-i18n');
+            if (dict[k] !== undefined) el.innerHTML = dict[k];
+        });
+        document.documentElement.lang = (lang === 'zh') ? 'zh-CN' : lang;
+        document.querySelectorAll('.lang-option').forEach(function(o) { o.classList.remove('active'); });
+        document.querySelectorAll('[data-lang="' + lang + '"]').forEach(function(o) { o.classList.add('active'); });
+        var cl = document.getElementById('currentLang');
+        if (cl) cl.textContent = (lang === 'zh') ? '中文' : lang.toUpperCase();
+        var dd = document.getElementById('langDropdown');
+        if (dd) dd.classList.remove('show');
+        if (typeof I18N !== 'undefined' && I18N.switchLang) I18N.switchLang(lang);
+        
+            }
+    
+    
+    if (_dbg) _dbg.textContent = 'Ready | zh:' + (!!pageTranslations.zh);
+
+    // Filter functions (handled by renderer.js)
+    function resetFilters() {
+        if (typeof window.resetSidebarFilters === 'function') {
+            window.resetSidebarFilters();
+        }
+    }
+    function setView(mode, btn) {
+        const grid = document.getElementById('productGrid');
+        document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        if (mode === 'list') {
+            grid.classList.add('list-view');
+        } else {
+            grid.classList.remove('list-view');
+        }
+    }
+    // Scroll reveal
+    const revealElements = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    revealElements.forEach(el => observer.observe(el));
+    </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    if (typeof PRODUCTS_DATA !== 'undefined' && typeof updateSeriesTabsForCategory !== 'undefined') {
+        currentCategory = 'porcelain';
+        updateSeriesTabsForCategory('porcelain');
+        initFilterSidebar('filterBar');
+        initSidebarFilters();
+        updateProductCount(getPorcelainCount());
+    }
+    if (typeof renderSceneGallery !== 'undefined') {
+        renderSceneGallery('sceneGrid', 8);
+    }
+});
+
+function getPorcelainCount() {
+    var total = 0;
+    for (var sid in PRODUCTS_DATA) {
+        if (sid === 'eco-brick') continue;
+        total += PRODUCTS_DATA[sid].variants.length;
+    }
+    return total;
+}
+
+</script>
+
+</body>
+</html>
