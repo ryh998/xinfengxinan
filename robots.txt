@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /token-server.php
+Disallow: /wordpress-theme/
+Disallow: /*.psd$
+Disallow: /*.zip$
+
+Sitemap: https://xinfengxinan.com/sitemap.xml
